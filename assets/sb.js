@@ -28,6 +28,7 @@ const fmtDate = (d) => new Date(d).toLocaleString("en-GB", { day: "numeric", mon
 /* Turn a pasted video link into an embeddable player. */
 function videoEmbed(url) {
   if (!url) return null;
+  if (url.startsWith("demo:")) return { type: "demo" };
   let u; try { u = new URL(url.trim()); } catch { return null; }
   const h = u.hostname.replace(/^www\.|^m\./, "");
   let id;

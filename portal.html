@@ -410,7 +410,9 @@ function drawPlayer() {
   if (!emb) {
     p.innerHTML = `<div class="soon"><div>${svg("i-video")}<b>Class ${c.day} is coming soon</b><span>The video will appear here as soon as it's uploaded.</span></div></div>`;
   } else {
-    const media = emb.type === "video"
+    const media = emb.type === "demo"
+      ? `<div class="soon"><div>${svg("i-play")}<b>Class ${c.day} video plays here</b><span>Preview: your real video appears here once you add its link in Admin.</span></div></div>`
+      : emb.type === "video"
       ? `<video src="${esc(emb.src)}" controls controlsList="nodownload noremoteplayback noplaybackrate" disablepictureinpicture playsinline preload="metadata"></video>`
       : `<iframe src="${esc(emb.src)}" title="${esc(c.title)}" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
     const tiles = Array.from({ length: 12 }, (_, i) => `<span class="wm tile" style="left:${(i % 3) * 34 + 2}%;top:${Math.floor(i / 3) * 25 + 8}%">${esc(watermarkText())}</span>`).join("");
