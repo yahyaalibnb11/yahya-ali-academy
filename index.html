@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yahya Ali Academy · Airbnb Arbitrage, Co-Hosting & AI</title>
+<meta name="description" content="Learn Airbnb rental arbitrage, build your own co-hosting agency and run it with AI. 14 classes in 14 days with Yahya Ali, who manages 200+ listings and has taught 1,800+ students. Rs 7,000.">
+<meta name="theme-color" content="#110d0a">
+<meta property="og:title" content="Yahya Ali Academy · Airbnb Arbitrage, Co-Hosting & AI">
+<meta property="og:description" content="14 classes in 14 days. Start your Airbnb business from zero, with or without your own property.">
+<meta property="og:image" content="assets/img/yahya.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffb21e'/%3E%3Cstop offset='.5' stop-color='%23ff5a1f'/%3E%3Cstop offset='1' stop-color='%23ff2d55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='28' text-anchor='middle' fill='white'%3EYA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+/* Landing-only additions */
+.top-actions{display:flex;align-items:center;gap:.6rem}
+.login-link{display:none;align-items:center;gap:.45rem;height:2.9rem;padding:0 1.1rem;border-radius:999px;border:1px solid var(--line-2);font-weight:600;font-size:.95rem;text-decoration:none;color:var(--cream)}
+.login-link svg{width:1.05rem;height:1.05rem}
+.login-link:hover{border-color:rgba(255,244,232,.5)}
+@media(min-width:760px){.login-link{display:inline-flex}}
+.cover .cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;mix-blend-mode:luminosity}
+.seats{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;font-weight:700;font-size:.92rem;color:var(--gold)}
+.seats svg{width:1rem;height:1rem}
+
+/* Real units gallery */
+.gal-sec{padding-block:clamp(4rem,8vw,7rem) 0}
+.gal{display:grid;gap:.8rem;margin-top:2.6rem;grid-template-columns:repeat(2,1fr);grid-auto-rows:9.5rem}
+@media(min-width:760px){.gal{grid-template-columns:repeat(4,1fr);grid-auto-rows:12rem}}
+@media(min-width:1100px){.gal{grid-auto-rows:14rem}}
+.gal figure{position:relative;margin:0;overflow:hidden;border-radius:1.2rem;border:1px solid var(--line);background:linear-gradient(135deg,#2a1d14,#1b1511)}
+.gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(17,13,10,.55),transparent 45%);pointer-events:none}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.gal figure:hover img{transform:scale(1.05)}
+.gal .big{grid-column:span 2;grid-row:span 2}
+.gal .tall{grid-row:span 2}
+.gal-note{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;margin-top:1.4rem;color:var(--cream-faint);font-size:.95rem}
+.gal-note span{display:flex;align-items:center;gap:.45rem}
+.gal-note svg{width:1rem;height:1rem;color:var(--ember)}
+
+/* How enrolment works */
+.flow4{display:grid;gap:1rem;margin-top:3rem;counter-reset:s}
+@media(min-width:760px){.flow4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.flow4{grid-template-columns:repeat(4,1fr)}}
+.flow4 article{position:relative;border:1px solid var(--line);border-radius:1.4rem;padding:1.6rem;background:rgba(27,21,17,.6)}
+.flow4 .ico{width:2.8rem;height:2.8rem;border-radius:.9rem}
+.flow4 .k{position:absolute;right:1.4rem;top:1.4rem;font:600 .85rem/1 var(--mono);color:var(--cream-faint)}
+.flow4 h3{margin-top:1.1rem;font-size:1.3rem;line-height:1.15}
+.flow4 p{margin-top:.5rem;color:var(--cream-dim);font-size:.97rem}
+
+/* 14-class curriculum */
+.week-h{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin:0 0 .8rem;padding:0 .3rem}
+.week-h b{font:800 1.35rem/1 var(--display);letter-spacing:-.02em}
+.week-h span{font:600 .85rem/1 var(--mono);color:var(--cream-faint)}
+.mods+.week-h{margin-top:2.2rem}
+.mod-n small{display:block;margin-top:.35rem;font:600 .62rem/1 var(--mono);letter-spacing:.08em;color:var(--cream-faint)}
+
+.plan .amt .free{font:800 clamp(2.7rem,2.2rem + 1.6vw,3.7rem)/.95 var(--display);letter-spacing:-.04em}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M10 8.5l5.5 3.5-5.5 3.5z" fill="currentColor"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2L20 3M16 7l3 3M18 5l2 2"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l4-4 5 2 5-2 4 4-7 7-2-2-2 2-2-2-2 2-2-2"/><path d="M12 9l-3 3 2 2 3-3"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 01-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1121 11.5z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5a1 1 0 011-1h3M16 4h3a1 1 0 011 1v3M20 16v3a1 1 0 01-1 1h-3M8 20H5a1 1 0 01-1-1v-3"/><path d="M7 12h10"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0M16 4.5a3.5 3.5 0 010 7M21.5 20a6.5 6.5 0 00-4-6"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8S10.5 3 8 4s0 4 4 4zm0 0s1.5-5 4-4 0 4-4 4z"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-inf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.7-3.6-4-5.5-4a4 4 0 000 8c1.9 0 3.5-1.3 5.5-4zm0 0c2 2.7 3.6 4 5.5 4a4 4 0 000-8c-1.9 0-3.5 1.3-5.5 4z"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h15a1 1 0 011 1v11a1 1 0 01-1 1H5a1 1 0 01-1-1V6a2 2 0 012-2h11"/><circle cx="16" cy="13.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.87 9.87 0 0012.04 2zm5.8 14.04c-.24.68-1.42 1.32-1.96 1.37-.5.05-.97.24-3.28-.68-2.78-1.1-4.55-3.95-4.69-4.13-.13-.18-1.12-1.49-1.12-2.85s.71-2.02.97-2.3c.25-.27.55-.34.73-.34l.53.01c.17 0 .4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.28.14.44.12.6-.07.16-.18.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.6.76 1.88.9.28.14.46.2.53.32.07.12.07.68-.17 1.36z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10.5" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 018 0v3"/></symbol>
+  <symbol id="i-unlock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10.5" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 017.6-1.7"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4h3a2 2 0 012 2v12a2 2 0 01-2 2h-3M10 16l-4-4 4-4M6 12h10"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7M5 9.5V20h14V9.5"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 10-2.3 5.7M20 4v7h-7"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4.5 4.5 0 006.4 0l3-3a4.5 4.5 0 00-6.4-6.4l-1 1M14 10a4.5 4.5 0 00-6.4 0l-3 3a4.5 4.5 0 006.4 6.4l1-1"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5a7 7 0 10-14 0C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Yahya Ali Academy, back to top">
+      <span class="mono" aria-hidden="true">YA</span>
+      <span><b>Yahya Ali</b><small>ACADEMY</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#curriculum">14 classes</a>
+      <a href="#how">How it works</a>
+      <a href="#instructor">Instructor</a>
+      <a href="#mentorship">Mentorship</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#consultation">Free call</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="top-actions">
+      <a class="login-link" href="portal.html"><svg><use href="#i-user"/></svg>Student login</a>
+      <a class="btn btn-primary" href="portal.html?plan=course" data-enrol><span>Enrol · <span data-price="course"></span></span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="dots"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="pill rise"><span class="live"></span><span>14-day program · 14 classes · Enrolment open</span></p>
+        <h1>
+          <span class="ln" style="animation-delay:.08s">Learn Airbnb arbitrage.</span>
+          <span class="ln" style="animation-delay:.18s">Build your own</span>
+          <span class="ln grad" style="animation-delay:.28s">co-hosting agency.</span>
+          <span class="ln" style="animation-delay:.38s">Run it with AI.</span>
+        </h1>
+        <p class="lead rise" style="animation-delay:.5s">Start your Airbnb business in Pakistan from zero, with or without your own property. <strong style="color:var(--cream)">One class a day for 14 days</strong> with Yahya Ali, who manages 200+ listings and has taught 1,800+ students.</p>
+        <div class="cta-row rise" style="animation-delay:.6s">
+          <a class="btn btn-primary" href="portal.html?plan=course" data-enrol><span>Enrol for <span data-price="course"></span></span><svg><use href="#i-arrow"/></svg></a>
+          <button class="btn btn-ghost" data-open="consultation">Book a free call<svg><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="ticks rise" style="animation-delay:.7s">
+          <span><svg><use href="#i-badge"/></svg>Your own members area</span>
+          <span><svg><use href="#i-badge"/></svg>Bank · JazzCash · Easypaisa</span>
+          <span><svg><use href="#i-badge"/></svg>Roman Urdu / Hindi</span>
+        </div>
+      </div>
+
+      <div class="card-wrap rise" style="animation-delay:.35s">
+        <article class="course" aria-label="Course summary">
+          <div class="cover">
+            <img class="cover-img" data-photo="0" alt="" onerror="this.remove()">
+            <span class="bigmono" aria-hidden="true">YA</span>
+            <span class="tag">YAHYA ALI ACADEMY</span>
+            <div>
+              <h3>Airbnb Arbitrage,<br>Co-Hosting &amp; AI</h3>
+              <p class="meta"><svg><use href="#i-play"/></svg><span>14 classes · 1 hour each · 2 weeks</span></p>
+            </div>
+          </div>
+          <div class="course-body">
+            <ul class="checks" data-list="includes"></ul>
+            <div class="price-row">
+              <div><small>One-time payment</small><div class="num" data-price="course"></div></div>
+              <a class="link" href="#curriculum">See all 14 classes</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div><b class="grad">200+</b><span>listings managed</span></div>
+      <div><b class="grad">1,800+</b><span>students taught</span></div>
+      <div><b class="grad">14</b><span>classes · 1 hour each</span></div>
+      <div><b class="grad">2</b><span>weeks, one class a day</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<!-- REAL UNITS -->
+<section class="gal-sec" id="units">
+  <div class="wrap">
+    <div class="split" style="align-items:end">
+      <div>
+        <p class="eyebrow">Not theory</p>
+        <h2 class="h2" style="margin-top:1.2rem">Real units.<br><span class="grad">Real guests.</span></h2>
+      </div>
+      <p class="lead">Every class comes from units we run every day: our own apartments, co-hosted homes, resorts and villas. You see exactly how they are set up, priced and managed.</p>
+    </div>
+    <div class="gal" id="gal"></div>
+    <div class="gal-note">
+      <span><svg><use href="#i-home"/></svg>20-25 own units</span>
+      <span><svg><use href="#i-hand"/></svg>Co-hosted properties, resorts &amp; villas</span>
+      <span><svg><use href="#i-pin"/></svg>Pakistan and abroad</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL BUILD -->
+<section id="outcomes">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">What you'll build</p>
+      <h2 class="h2" style="margin-top:1.2rem">Three skills.<br><span class="grad">One business.</span></h2>
+      <p class="lead">Most courses stop at "how to list on Airbnb". This one takes you from your first unit to an agency that runs on systems.</p>
+    </div>
+    <div class="tracks">
+      <article class="trk">
+        <span class="ico"><svg><use href="#i-key"/></svg></span>
+        <div>
+          <h3>Airbnb rental arbitrage</h3>
+          <p>Rent apartments long-term with the landlord's approval, furnish them smartly and earn the difference as short stays. No property of your own needed.</p>
+          <ul><li>Finding landlords</li><li>ROI &amp; break-even</li><li>Agreements</li><li>Low-budget setup</li></ul>
+        </div>
+      </article>
+      <article class="trk">
+        <span class="ico"><svg><use href="#i-hand"/></svg></span>
+        <div>
+          <h3>Your own co-hosting agency</h3>
+          <p>Manage other owners' properties for a commission. No rent, no furnishing. Learn the pitch, the commission models and the contract.</p>
+          <ul><li>Approaching owners</li><li>Commission models</li><li>Co-hosting contract</li><li>Team &amp; systems</li></ul>
+        </div>
+      </article>
+      <article class="trk">
+        <span class="ico"><svg><use href="#i-spark"/></svg></span>
+        <div>
+          <h3>AI &amp; automation</h3>
+          <p>Use AI for listings, guest replies and reviews, and automate bookings, reminders and WhatsApp so the daily work runs without you.</p>
+          <ul><li>AI guest replies</li><li>AI listing writer</li><li>WhatsApp automation</li><li>Saved replies</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AGENCY BLUEPRINT (cream) -->
+<section class="cream" id="agency">
+  <div class="wrap">
+    <div class="split" style="align-items:end">
+      <div>
+        <p class="eyebrow">The 14-day path</p>
+        <h2 class="h2" style="margin-top:1.2rem">From one unit<br>to an agency.</h2>
+      </div>
+      <p class="lead">The two weeks follow the life of a real short-stay business, with the scripts, agreements and numbers for each stage.</p>
+    </div>
+    <div class="agency">
+      <div class="step"><span class="k">DAYS 1-4</span><h3>Understand &amp; choose</h3><p>The three models, real costs and profit, market research, and picking a property that pays.</p></div>
+      <div class="step"><span class="k">DAYS 5-8</span><h3>Sign &amp; launch</h3><p>Landlord deal and agreement, low-budget setup, and listings on Airbnb and Booking.com that rank.</p></div>
+      <div class="step"><span class="k">DAYS 9-12</span><h3>Earn &amp; operate</h3><p>Dynamic pricing, revenue tracking, guest management, 5-star reviews and AI automation.</p></div>
+      <div class="step"><span class="k">DAYS 13-14</span><h3>Co-host &amp; scale</h3><p>Win owners, close co-hosting deals, build a team, direct bookings and your own brand.</p></div>
+    </div>
+    <div class="calc">
+      <div>
+        <p class="eyebrow" style="color:var(--gold)">Class 4</p>
+        <h3>Run the numbers before you spend a rupee.</h3>
+        <p class="muted" style="margin-top:1rem">A worked break-even for one 1-bed arbitrage unit. You get the sheet and learn to plug in your own city's real rates and occupancy, including the 1 rent + 2 securities starting capital.</p>
+        <p class="note">Illustrative example only. Your numbers will differ.</p>
+      </div>
+      <div class="ledger" aria-label="Example monthly numbers">
+        <div><span>Nightly rate</span><span>Rs 8,500</span></div>
+        <div><span>Nights booked / month</span><span>15</span></div>
+        <div><span>Booking revenue</span><span>Rs 127,500</span></div>
+        <div><span>Rent</span><span>− Rs 60,000</span></div>
+        <div><span>Bills, cleaning, supplies</span><span>− Rs 30,000</span></div>
+        <div><span>Platform fees (~3%)</span><span>− Rs 3,800</span></div>
+        <div class="total"><span style="color:var(--cream);font-weight:700">Monthly profit</span><b class="grad">Rs 33,700</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum">
+  <div class="wrap split sticky">
+    <div>
+      <p class="eyebrow">Curriculum</p>
+      <h2 class="h2" style="margin-top:1.2rem">14 classes.<br><span class="grad">14 days.</span></h2>
+      <p class="lead">One focused 1-hour class a day. Watch it, do the task, move to the next. By day 14 you know the whole business, A to Z.</p>
+      <div class="chips">
+        <span><svg><use href="#i-video"/></svg>14 hours of video</span>
+        <span><svg><use href="#i-cal"/></svg>2 weeks</span>
+        <span><svg><use href="#i-chat"/></svg>Roman Urdu</span>
+      </div>
+      <div style="margin-top:2rem"><a class="btn btn-primary" href="portal.html?plan=course" data-enrol><span>Enrol for <span data-price="course"></span></span><svg><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div id="weeks"></div>
+  </div>
+</section>
+
+<!-- AI -->
+<section class="ai" id="ai">
+  <div class="glow"></div>
+  <div class="wrap" style="position:relative">
+    <div class="split" style="align-items:end">
+      <div>
+        <p class="eyebrow">AI integration</p>
+        <h2 class="h2" style="margin-top:1.2rem">Let AI do<br><span class="grad">the busywork.</span></h2>
+      </div>
+      <p class="lead">You learn to set these up yourself, step by step, with tools you can start using the same day.</p>
+    </div>
+    <div class="ai-grid">
+      <article class="ai-c"><span class="ico"><svg><use href="#i-chat"/></svg></span><h3>AI guest replies</h3><p>Drafts answers to guest questions in seconds, in your tone, for you to approve.</p></article>
+      <article class="ai-c"><span class="ico"><svg><use href="#i-pen"/></svg></span><h3>AI listing writer</h3><p>Turns a few notes and photos into titles and descriptions that rank and convert.</p></article>
+      <article class="ai-c"><span class="ico"><svg><use href="#i-star"/></svg></span><h3>AI review replies</h3><p>Thoughtful replies to every review, good or bad, that win the next guest.</p></article>
+      <article class="ai-c"><span class="ico"><svg><use href="#i-scan"/></svg></span><h3>Listing audits</h3><p>Reviews any owner's listing and finds fixes, the free audit that wins you co-hosting deals.</p></article>
+      <article class="ai-c"><span class="ico"><svg><use href="#i-bolt"/></svg></span><h3>WhatsApp automation</h3><p>Booking confirmations, check-in details and reminders sent automatically.</p></article>
+      <article class="ai-c"><span class="ico"><svg><use href="#i-chart"/></svg></span><h3>One system for everything</h3><p>Bookings, owners, leads and money in one dashboard, the way a real agency runs.</p>
+        <div class="flow" aria-label="Example flow"><span>Ad</span><i>→</i><span>WhatsApp</span><i>→</i><span>AI reply</span><i>→</i><span>Booking</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section id="instructor">
+  <div class="wrap inst">
+    <div class="photo">
+      <figure>
+        <img src="assets/img/yahya.jpg" alt="Yahya Ali" width="600" height="800">
+        <figcaption><b>Yahya Ali</b><span>Founder of Hostly · 200+ listings managed</span></figcaption>
+      </figure>
+    </div>
+    <div>
+      <p class="eyebrow">Your mentor</p>
+      <h2 class="h2" style="margin-top:1.2rem">Started with one flat.<br><span class="grad">Now 200+ listings.</span></h2>
+      <p class="lead" style="margin-top:1.8rem">Two years ago Yahya Ali started in Faisalabad with one furnished apartment. Today he manages 200+ listings in Pakistan and abroad, including 20-25 of his own units, co-hosted properties, resorts and villas.</p>
+      <p class="lead">He is the founder of Hostly and has taught more than 1,800 students. This program is exactly how he did it, step by step.</p>
+      <div class="facts">
+        <div><svg><use href="#i-check"/></svg>200+ listings managed</div>
+        <div><svg><use href="#i-check"/></svg>1,800+ students taught</div>
+        <div><svg><use href="#i-check"/></svg>20-25 own units</div>
+        <div><svg><use href="#i-check"/></svg>Resorts, villas &amp; co-hosting</div>
+      </div>
+      <p style="margin-top:1.8rem"><a class="link" data-ig href="#" target="_blank" rel="noopener noreferrer">Follow @yahyaalii.bnb on Instagram</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- BONUSES -->
+<div class="wrap" style="padding-bottom:clamp(4.5rem,9vw,8.5rem)">
+  <div class="toolkit">
+    <div>
+      <p class="tk-eyebrow"><svg><use href="#i-gift"/></svg>Bonuses for students</p>
+      <h2 style="margin-top:1rem">You don't start alone.</h2>
+      <p>Enrol and you also get real help getting your first unit live. Seats are limited so every student gets attention.</p>
+    </div>
+    <div class="tk-list" id="bonuses"></div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="padding-top:0">
+  <div class="wrap">
+    <div class="split" style="align-items:end">
+      <div>
+        <p class="eyebrow">How enrolment works</p>
+        <h2 class="h2" style="margin-top:1.2rem">Pay. Upload.<br><span class="grad">Start learning.</span></h2>
+      </div>
+      <p class="lead">No card needed. Pay by bank, JazzCash or Easypaisa, upload the screenshot, and your classes unlock as soon as I confirm it.</p>
+    </div>
+    <div class="flow4">
+      <article><span class="k">01</span><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Create your account</h3><p>Email and a password. Takes 30 seconds.</p></article>
+      <article><span class="k">02</span><span class="ico"><svg><use href="#i-wallet"/></svg></span><h3>Pay <span data-price="course"></span></h3><p>Bank transfer, JazzCash or Easypaisa. International students can pay by bank or Wise.</p></article>
+      <article><span class="k">03</span><span class="ico"><svg><use href="#i-upload"/></svg></span><h3>Upload the screenshot</h3><p>I check it and approve your account, usually within a few hours.</p></article>
+      <article><span class="k">04</span><span class="ico"><svg><use href="#i-unlock"/></svg></span><h3>Classes unlock</h3><p>All 14 classes in your members area. One a day, at your own time.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- MENTORSHIP -->
+<div class="wrap" id="mentorship" style="padding-bottom:clamp(4.5rem,9vw,8.5rem)">
+  <div class="mentor">
+    <div class="glow"></div>
+    <div>
+      <p class="eyebrow">Premium · 1-on-1 live mentorship</p>
+      <h2>Just you and me.<br><span class="gold-text">Live, for <span data-mentor-days></span> days.</span></h2>
+      <p class="lead">For international students and people who are fully committed. We meet live on Zoom, one-on-one, and build your arbitrage or co-hosting business together, step by step, around your city and your budget.</p>
+      <div class="m-price">
+        <div><small>Premium mentorship</small><b class="gold-text" data-price="mentor"></b></div>
+        <button class="btn btn-gold" data-open="mentorship">Apply for mentorship<svg><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+    <div class="m-list">
+      <div><svg><use href="#i-video"/></svg><p><b data-mentor-sessions>Live Zoom sessions</b><span>One-on-one with Yahya. No group.</span></p></div>
+      <div><svg><use href="#i-target"/></svg><p><b>A plan built for your market</b><span>Pakistan, UAE, UK, US or wherever you are: area, numbers and model chosen together.</span></p></div>
+      <div><svg><use href="#i-hand"/></svg><p><b>Launch with me, not alone</b><span>Your first listing, first owner pitch and your agency offer, reviewed live.</span></p></div>
+      <div><svg><use href="#i-spark"/></svg><p><b>Your AI and automation set up</b><span>We set up your AI replies and WhatsApp together on the calls.</span></p></div>
+      <div><svg><use href="#i-chat"/></svg><p><b>Direct WhatsApp access</b><span>Message me between sessions while the mentorship runs.</span></p></div>
+      <div><svg><use href="#i-gift"/></svg><p><b>All 14 classes included</b><span>Full members-area access, so you can rewatch everything.</span></p></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="glow"></div>
+  <div class="wrap" style="position:relative">
+    <div style="text-align:center">
+      <p class="eyebrow">Pricing</p>
+      <h2 class="h2" style="margin-top:1.2rem">Pick your <span class="grad">path.</span></h2>
+    </div>
+    <div class="plans">
+      <article class="plan main">
+        <div class="plan-h"><b>14-day program</b><span class="badge">Most popular</span></div>
+        <p class="sub">Airbnb Arbitrage, Co-Hosting &amp; AI</p>
+        <div class="amt"><b data-price="course"></b><span>one-time</span></div>
+        <ul class="checks" data-list="includes" data-solid></ul>
+        <a class="btn btn-primary btn-block" href="portal.html?plan=course" data-enrol>Enrol now<svg><use href="#i-arrow"/></svg></a>
+        <p class="pay-note">Bank transfer · JazzCash · Easypaisa</p>
+      </article>
+      <article class="plan prem">
+        <div class="plan-h"><b>1-on-1 live mentorship</b><span class="badge gold">Premium</span></div>
+        <p class="sub">Live on Zoom · <span data-mentor-days></span> days · for dedicated &amp; international students</p>
+        <div class="amt"><b data-price="mentor" class="gold-text"></b><span>one-time</span></div>
+        <ul class="checks" data-list="mentor" data-solid></ul>
+        <button class="btn btn-gold btn-block" data-open="mentorship">Apply for mentorship<svg><use href="#i-arrow"/></svg></button>
+        <p class="pay-note">By application · Pakistan &amp; international payments</p>
+      </article>
+      <article class="plan alt">
+        <div class="plan-h"><b>Consultation call</b></div>
+        <p class="sub">Not sure where to start? Let's talk.</p>
+        <div class="amt"><b class="free">Free</b><span>/ <span data-minutes></span> min</span></div>
+        <ul class="checks" data-list="call"></ul>
+        <button class="btn btn-light btn-block" data-open="consultation">Book a free call<svg><use href="#i-arrow"/></svg></button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTATION -->
+<section class="consult" id="consultation">
+  <div class="wrap consult-grid">
+    <div>
+      <p class="eyebrow">Free consultation call</p>
+      <h2 class="h2" style="margin-top:1.2rem">Get a plan for<br><span class="grad">your</span> situation.</h2>
+      <p class="lead" style="margin-top:1.6rem">Starting from zero, have a property, or already hosting? In <span data-minutes></span> minutes we look at your situation and the right model for you. No cost, no pressure.</p>
+      <ul class="how">
+        <li><span class="ico"><svg><use href="#i-cal"/></svg></span>Pick a slot that suits you</li>
+        <li><span class="ico"><svg><use href="#i-users"/></svg></span>Talk on Google Meet, Zoom or WhatsApp video</li>
+        <li><span class="ico"><svg><use href="#i-note"/></svg></span>Leave with clear next steps</li>
+      </ul>
+    </div>
+    <div class="paper">
+      <div class="slot-h"><span><svg><use href="#i-cal"/></svg>Pick a slot</span><small><span data-minutes></span> min · Pakistan time</small></div>
+      <div class="days" id="inline-days" role="group" aria-label="Day"></div>
+      <div class="times" id="inline-times" role="group" aria-label="Time"></div>
+      <button class="btn btn-primary btn-block" id="inline-book" style="margin-top:1.3rem" disabled>Choose a time to continue<svg><use href="#i-arrow"/></svg></button>
+      <button class="text-btn" data-open="consultation">See more dates</button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">FAQ</p>
+      <h2 class="h2" style="margin-top:1.2rem">Good<br><span class="grad">questions.</span></h2>
+    </div>
+    <div class="faq" id="faqs"></div>
+  </div>
+</section>
+
+<!-- QUESTIONS -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap split sticky">
+    <div>
+      <p class="eyebrow">Still deciding?</p>
+      <h2 class="h2" style="margin-top:1.2rem">Ask me<br><span class="grad">anything.</span></h2>
+      <p class="lead">Send your question and I'll reply on WhatsApp, usually within a few hours.</p>
+      <p style="margin-top:1.6rem"><a class="btn btn-ghost" data-wa="Hi Yahya! I have a question about the 14-day program." href="#" target="_blank" rel="noopener noreferrer"><svg style="color:var(--wa)"><use href="#i-wa"/></svg><span data-wa-display></span></a></p>
+    </div>
+    <div class="paper" id="ask-box">
+      <form id="ask" class="fgrid" novalidate>
+        <div class="fgrid two">
+          <div class="field"><label for="a-name">Full name</label><input id="a-name" name="name" autocomplete="name"><p class="err">Please enter your full name</p></div>
+          <div class="field"><label for="a-phone">WhatsApp number</label><input id="a-phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="03xx xxxxxxx"><p class="err">Please enter a valid WhatsApp number</p></div>
+        </div>
+        <div class="fgrid two">
+          <div class="field"><label for="a-email">Email <small>Optional</small></label><input id="a-email" name="email" type="email" autocomplete="email"><p class="err">Please enter a valid email</p></div>
+          <div class="field"><label for="a-city">City <small>Optional</small></label><input id="a-city" name="city" autocomplete="address-level2"></div>
+        </div>
+        <div class="fgrid two">
+          <div class="field"><label for="a-profile">You are <small>Optional</small></label><select id="a-profile" name="profile" data-options="profiles"></select></div>
+          <div class="field"><label for="a-interest">Interested in <small>Optional</small></label><select id="a-interest" name="interest" data-options="interests"></select></div>
+        </div>
+        <div class="field"><label for="a-msg">Your question <small>Optional</small></label><textarea id="a-msg" name="message" placeholder="Ask anything about the program, arbitrage, co-hosting or AI…"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="a-hp">Website</label><input id="a-hp" tabindex="-1" autocomplete="off"></div>
+        <p class="alert" id="ask-err" hidden></p>
+        <button class="btn btn-ink btn-block" type="submit" id="ask-btn"><svg><use href="#i-send"/></svg>Send my question</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<div class="wrap">
+  <div class="final">
+    <div class="glow"></div>
+    <span class="mono" aria-hidden="true">YA</span>
+    <h2>Your Airbnb business <span class="grad">starts in 14 days.</span></h2>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="portal.html?plan=course" data-enrol><span>Enrol for <span data-price="course"></span></span><svg><use href="#i-arrow"/></svg></a>
+      <button class="btn btn-ghost" data-open="consultation">Book a free call<svg><use href="#i-arrow"/></svg></button>
+    </div>
+    <p class="seats"><svg><use href="#i-users"/></svg>Seats are limited each batch</p>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-yr>2026</span> Yahya Ali Academy</span>
+    <nav aria-label="Links">
+      <a href="portal.html">Student login</a>
+      <a data-ig href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a data-wa="Hi Yahya!" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <div><b data-price="course"></b><small>14 classes · 2 weeks</small></div>
+  <a class="btn btn-primary" href="portal.html?plan=course" data-enrol>Enrol now</a>
+</div>
+<a class="wa" id="wa" data-wa="Hi Yahya! I want to know more about the 14-day program." href="#" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<!-- BOOK / APPLY -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title" hidden>
+  <button class="scrim" data-close aria-label="Close"></button>
+  <div class="sheet" id="sheet">
+    <div class="sheet-h">
+      <div class="row">
+        <div><p class="eyebrow" id="m-eyebrow">Book your call</p><h3 id="m-title">Free consultation</h3></div>
+        <button class="x" data-close aria-label="Close"><svg><use href="#i-x"/></svg></button>
+      </div>
+      <div class="prog" id="prog"></div>
+    </div>
+    <div class="sheet-b">
+      <!-- slot -->
+      <div data-step="slot" hidden>
+        <h4>Choose a day</h4>
+        <div class="days" id="m-days" role="group" aria-label="Day"></div>
+        <h4 style="margin-top:1.3rem">Choose a time (Pakistan time)</h4>
+        <div class="times" id="m-times" role="group" aria-label="Time"></div>
+        <p class="muted" style="margin-top:1rem;font-size:.95rem"><span data-minutes></span> minutes on Google Meet, Zoom or WhatsApp video. I confirm your slot on WhatsApp.</p>
+        <button class="btn btn-primary btn-block" id="slot-next" style="margin-top:1.4rem" disabled>Continue<svg><use href="#i-arrow"/></svg></button>
+      </div>
+      <!-- details -->
+      <form data-step="details" id="details" class="fgrid" novalidate hidden>
+        <div class="slotbox" id="slotbox" hidden><div><small>Your slot</small><b id="slot-label"></b></div><button type="button" data-goto="slot">Change</button></div>
+        <div class="field"><label for="d-name">Full name</label><input id="d-name" autocomplete="name"><p class="err">Please enter your full name</p></div>
+        <div class="fgrid two">
+          <div class="field"><label for="d-phone">WhatsApp number</label><input id="d-phone" inputmode="tel" autocomplete="tel" placeholder="03xx xxxxxxx"><p class="err">Please enter a valid WhatsApp number</p></div>
+          <div class="field"><label for="d-email">Email <small>Optional</small></label><input id="d-email" type="email" autocomplete="email"><p class="err">Please enter a valid email</p></div>
+        </div>
+        <div class="fgrid two">
+          <div class="field"><label for="d-city">City <small>Optional</small></label><input id="d-city" autocomplete="address-level2"></div>
+          <div class="field"><label for="d-profile">You are <small>Optional</small></label><select id="d-profile" data-options="profiles"></select></div>
+        </div>
+        <div class="fgrid two" id="mentor-fields" hidden>
+          <div class="field"><label for="d-country">Country</label><input id="d-country" autocomplete="country-name" placeholder="e.g. Pakistan, UAE, UK"><p class="err">Please enter your country</p></div>
+          <div class="field"><label for="d-start">Preferred start <small>Optional</small></label><input id="d-start" placeholder="e.g. next week, 1 Nov"></div>
+        </div>
+        <div class="field" id="goal-field" hidden><label for="d-goal">What do you want to achieve? <small>Optional</small></label><textarea id="d-goal" rows="3" placeholder="e.g. Launch 3 arbitrage units in Dubai, or start a co-hosting agency in Lahore"></textarea></div>
+        <div class="field" id="topic-field" hidden><label for="d-topic">What do you want to discuss? <small>Optional</small></label><textarea id="d-topic" rows="3" placeholder="e.g. Is my apartment good for Airbnb? Arbitrage or co-hosting?"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="d-hp">Website</label><input id="d-hp" tabindex="-1" autocomplete="off"></div>
+        <p class="alert" id="send-err" hidden></p>
+        <div class="btns">
+          <button type="button" class="back" id="details-back" data-goto="slot" aria-label="Back"><svg><use href="#i-left"/></svg></button>
+          <button type="submit" class="btn btn-primary" id="send-btn"><span id="send-label">Book my free call</span><svg><use href="#i-arrow"/></svg></button>
+        </div>
+      </form>
+      <!-- done -->
+      <div data-step="done" class="done" hidden>
+        <div class="badge-ok"><svg><use href="#i-check"/></svg></div>
+        <h4 id="done-title">Slot requested.</h4>
+        <p id="done-text"></p>
+        <span class="ref" id="done-ref"></span>
+        <a class="btn btn-wa btn-block" id="done-wa" href="#" target="_blank" rel="noopener noreferrer" style="margin-top:1.5rem"><svg><use href="#i-wa"/></svg>Confirm on WhatsApp</a>
+        <button class="text-btn" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/config.js"></script>
+<script src="assets/classes.js"></script>
+<script src="assets/common.js"></script>
+<script>
+/* Photos of units we run (public links). */
+const PHOTO_BASE = "https://dwfelduzybgtqbyuvlse.supabase.co/storage/v1/object/public/property-photos/";
+const PHOTOS = ["BC204/1791907704731-x49g2c.jpg", "RHD5/1791925813991-ne9ltm.jpg", "BC203/1791923805413-ghgrfw.jpg", "BC209/1792326350747-hro2xn.jpg", "RHD5/1791925809326-97cjx8.jpg", "BC201/1792326717864-o9zw9y.jpg", "BC204/1791906206949-ce1oil.jpg", "RHD5/1791925791100-djl882.jpg"];
+
+const BONUSES = ["Free consultation call", "Help finding the right property", "Help with setup & furnishing", "Launch your first unit with Yahya Ali", "We can manage your property for you", "A chance to work with our team"];
+const FAQS = [
+  ["Do I need my own property to start?", "No. Rental arbitrage and co-hosting both let you start without owning property. If you do have a property, you'll learn how to run it for maximum profit."],
+  ["How do the classes work?", "There are 14 recorded classes of about 1 hour each, one for every day of the two weeks. They are saved in your members area, so you can watch at your own time and rewatch anytime."],
+  ["How do I get access after paying?", "Create your account, pay by bank, JazzCash or Easypaisa, and upload the payment screenshot. I check it and approve your account, usually within a few hours. Your classes unlock instantly after that."],
+  ["What language are the classes in?", "Roman Urdu / Hindi, with the English business terms you'll use with platforms, guests and owners."],
+  ["Do I need technical skills for the AI part?", "No. Every AI and automation setup is shown click by click with tools that don't need coding."],
+  ["Will this work outside Islamabad and Lahore?", "Yes. The examples come from Pakistan, but the research, pricing, co-hosting and AI systems work in any city, including the UAE."],
+  ["Do you guarantee earnings?", "No honest course can. Results depend on your city, unit, budget and effort. You learn the exact systems we use and how to check the numbers before you spend."],
+  ["What is the premium 1-on-1 mentorship?", `Live one-on-one sessions with me on Zoom over ${A.mentorDays} days, for international students and people who are fully committed. We build your business together, and all 14 classes are included.`],
+  ["Which payment methods can I use?", "In Pakistan: bank transfer, JazzCash or Easypaisa. From abroad: international bank transfer or Wise."],
+];
+const PROFILES = ["Complete beginner", "I own a property", "I already host on Airbnb", "Real-estate agent / builder", "Other"];
+const INTERESTS = ["The 14-day program", "Premium 1-on-1 mentorship", "Free consultation call", "Starting a co-hosting agency", "Something else"];
+
+/* Fill numbers and lists */
+$$("[data-price]").forEach((e) => (e.textContent = pkr({ course: A.coursePrice, mentor: A.mentorPrice }[e.dataset.price])));
+$$("[data-minutes]").forEach((e) => (e.textContent = A.callMinutes));
+$$("[data-mentor-days]").forEach((e) => (e.textContent = A.mentorDays));
+$$("[data-mentor-sessions]").forEach((e) => (e.textContent = `${A.mentorDays} live Zoom sessions`));
+$$("[data-ig]").forEach((e) => (e.href = A.instagram));
+$$("[data-enrol]").forEach((e) => (e.href += (location.search ? "&" + location.search.slice(1) : "")));
+
+const LISTS = {
+  includes: ["14 classes, 1 hour each, over 2 weeks", "Your own members area to watch & rewatch", "Arbitrage, co-hosting & AI automation", "Templates, checklists & break-even sheet", "Free consultation call + launch help"],
+  mentor: [`${A.mentorDays} live 1-on-1 Zoom sessions`, "A business plan built for your market", "Launch your listing & agency together", "AI & WhatsApp set up with you", "Direct WhatsApp access during the program", "All 14 classes included"],
+  call: [`${A.callMinutes} minutes, 1-on-1 with Yahya`, "Which model fits you", "Review of your property or area", "Clear next steps"],
+};
+$$("[data-list]").forEach((ul) => {
+  ul.innerHTML = LISTS[ul.dataset.list].map((t) => `<li><span class="chk${ul.hasAttribute("data-solid") ? " solid" : ""}">${svg("i-check")}</span>${esc(t)}</li>`).join("");
+});
+$$("[data-options]").forEach((s) => {
+  const opts = s.dataset.options === "profiles" ? PROFILES : INTERESTS;
+  s.innerHTML = `<option value="">Select…</option>` + opts.map((o) => `<option>${esc(o)}</option>`).join("");
+});
+$("#bonuses").innerHTML = BONUSES.map((b) => `<div>${svg("i-check")}${esc(b)}</div>`).join("");
+
+/* Photos: if the photo links ever stop working, the gallery hides itself */
+let galErr = 0;
+function galFail(img) { img.closest("figure").remove(); if (++galErr >= 6) $("#units").hidden = true; }
+const LAYOUT = ["big", "", "tall", "", "", "", "", ""];
+$("#gal").innerHTML = PHOTOS.slice(0, 8).map((p, i) => `<figure class="${LAYOUT[i]}"><img src="${PHOTO_BASE + p}" alt="One of the units we run" loading="lazy" onerror="galFail(this)"></figure>`).join("");
+$$("[data-photo]").forEach((img) => (img.src = PHOTO_BASE + PHOTOS[+img.dataset.photo]));
+
+/* Marquee */
+const TOPICS = ["Airbnb", "Rental arbitrage", "Co-hosting", "Booking.com", "Dynamic pricing", "PriceLabs", "5-star reviews", "AI automation", "WhatsApp", "Direct bookings", "Your own brand"];
+$("#track").innerHTML = [...TOPICS, ...TOPICS].map((t) => `<span>${esc(t)}<i>✦</i></span>`).join("");
+
+/* Curriculum: two weeks of seven classes */
+$("#weeks").innerHTML = [1, 2].map((w) => {
+  const list = CLASSES.filter((c) => c.week === w);
+  return `<div class="week-h"><b>Week ${w}</b><span>DAYS ${list[0].day}-${list[list.length - 1].day} · ${list.length} HOURS</span></div>
+  <ol class="mods">${list.map((c) => `<li class="${c.day === 1 ? "open" : ""}">
+    <button class="mod-h" aria-expanded="${c.day === 1}"><span class="mod-n">${pad2(c.day)}<small>DAY</small></span>
+    <span class="mod-t"><b>${esc(c.title)}${c.ai ? '<span class="ai-tag">AI</span>' : ""}</b><small>Class ${c.day} · 1 hour · ${c.topics.length} topics</small></span>
+    <span class="mod-x">${svg("i-plus")}</span></button>
+    <div class="mod-b"><div><div class="mod-in"><p>${esc(c.summary)}</p><ul class="lessons">${c.topics.map((t) => `<li><span>${esc(t)}</span></li>`).join("")}</ul></div></div></div></li>`).join("")}</ol>`;
+}).join("");
+$("#weeks").addEventListener("click", (e) => {
+  const b = e.target.closest(".mod-h");
+  if (!b) return;
+  const li = b.parentElement;
+  const open = !li.classList.contains("open");
+  li.classList.toggle("open", open);
+  b.setAttribute("aria-expanded", open);
+});
+
+/* FAQ */
+$("#faqs").innerHTML = FAQS.map(([q, a], i) => `<details${i === 0 ? " open" : ""}><summary>${esc(q)}${svg("i-down")}</summary><p>${esc(a)}</p></details>`).join("");
+
+/* Header + floating bar */
+function onScroll() {
+  $("#top").classList.toggle("scrolled", scrollY > 24);
+  const past = scrollY > innerHeight * 0.8;
+  $("#mbar").classList.toggle("show", past);
+  $("#wa").classList.toggle("up", past);
+}
+addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+$$("[data-enrol]").forEach((a) => a.addEventListener("click", () => track("InitiateCheckout", { content_name: "course" })));
+
+/* Dates (Pakistan time, Sundays off) */
+function bookableDays(n) {
+  const out = [];
+  const pk = new Date(Date.now() + 5 * 3600e3);
+  for (let i = 1; out.length < n && i < n + 10; i++) {
+    const d = new Date(Date.UTC(pk.getUTCFullYear(), pk.getUTCMonth(), pk.getUTCDate() + i));
+    if (d.getUTCDay() === 0) continue;
+    out.push({ iso: d.toISOString().slice(0, 10), wd: d.toLocaleDateString("en-GB", { weekday: "short", timeZone: "UTC" }), day: d.getUTCDate(), mon: d.toLocaleDateString("en-GB", { month: "short", timeZone: "UTC" }) });
+  }
+  return out;
+}
+const to12 = (t) => { const [h, m] = t.split(":").map(Number); return `${((h + 11) % 12) + 1}:${pad2(m)} ${h < 12 ? "AM" : "PM"}`; };
+const pretty = (iso) => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
+
+function slotPicker(daysEl, timesEl, count, state, onChange) {
+  const days = bookableDays(count);
+  if (!state.date) state.date = days[0].iso;
+  const draw = () => {
+    daysEl.innerHTML = days.map((d) => `<button type="button" class="day${d.iso === state.date ? " on" : ""}" data-d="${d.iso}" aria-pressed="${d.iso === state.date}"><small>${d.wd}</small><b>${d.day}</b><small>${d.mon}</small></button>`).join("");
+    timesEl.innerHTML = A.slots.map((t) => `<button type="button" class="time${t === state.time ? " on" : ""}" data-t="${t}" aria-pressed="${t === state.time}">${to12(t)}</button>`).join("");
+  };
+  daysEl.onclick = (e) => { const b = e.target.closest("[data-d]"); if (b) { state.date = b.dataset.d; draw(); onChange(); } };
+  timesEl.onclick = (e) => { const b = e.target.closest("[data-t]"); if (b) { state.time = b.dataset.t; draw(); onChange(); } };
+  draw();
+}
+
+const inline = { date: "", time: "" };
+slotPicker($("#inline-days"), $("#inline-times"), 7, inline, () => {
+  const b = $("#inline-book");
+  b.disabled = !inline.time;
+  b.firstChild.textContent = inline.time ? `Book ${to12(inline.time)} · Free` : "Choose a time to continue";
+});
+$("#inline-book").addEventListener("click", () => openModal("consultation", inline.date, inline.time));
+
+/* Questions form */
+$("#ask").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if ($("#a-hp").value) return;
+  if (!validate([[$("#a-name"), nameOk], [$("#a-phone"), phoneOk], [$("#a-email"), emailOk]])) return;
+  const btn = $("#ask-btn"); btn.disabled = true;
+  const r = makeRef("ASK");
+  const data = { Reference: r, Request: "QUESTION", Name: $("#a-name").value, "WhatsApp / phone": $("#a-phone").value, Email: $("#a-email").value, City: $("#a-city").value, "You are": $("#a-profile").value, "Interested in": $("#a-interest").value, Question: $("#a-msg").value };
+  const [mailed, saved] = await Promise.all([
+    sendMail(`Academy · Question · ${data.Name} (${r})`, data),
+    saveInquiry({ kind: "question", name: data.Name, email: data.Email || null, phone: data["WhatsApp / phone"], message: data.Question || null, details: { ref: r, city: data.City, profile: data["You are"], interest: data["Interested in"], source: source() } }),
+  ]);
+  btn.disabled = false;
+  const waMsg = `Hi Yahya! I'm ${data.Name}. ${data.Question}`.trim();
+  if (!mailed && !saved) {
+    const er = $("#ask-err"); er.hidden = false;
+    er.innerHTML = `Couldn't send right now. <a href="${waLink(waMsg)}" target="_blank" rel="noopener noreferrer">Send it on WhatsApp instead</a>.`;
+    return;
+  }
+  track("Lead", { content_name: "Academy question" });
+  $("#ask-box").innerHTML = `<div class="sent"><div class="badge-ok">${svg("i-check")}</div><h3>Message received.</h3><p>I'll get back to you on WhatsApp shortly. Want an answer right now?</p><a class="btn btn-wa" href="${waLink(waMsg)}" target="_blank" rel="noopener noreferrer">${svg("i-wa")}Chat on WhatsApp</a></div>`;
+});
+
+/* Book a free call / apply for mentorship */
+const MODES = {
+  consultation: { eyebrow: "Book your free call", title: () => `Free consultation · ${A.callMinutes} min`, ref: "CALL", request: "FREE CONSULTATION", cta: "Book my free call", done: "Slot requested.", text: "I'll confirm your slot on WhatsApp shortly.", ev: "Schedule" },
+  mentorship: { eyebrow: "Apply · Premium", title: () => `1-on-1 live mentorship · ${A.mentorDays} days`, ref: "MNT", request: "PREMIUM 1-ON-1 MENTORSHIP", cta: "Send my application", done: "Application received.", text: "I review every application and reply on WhatsApp within 24 hours with your start date and payment details.", ev: "SubmitApplication" },
+};
+const co = { mode: "consultation", date: "", time: "" };
+const M = () => MODES[co.mode];
+const modal = $("#modal");
+function steps() { return co.mode === "consultation" ? ["slot", "details"] : ["details"]; }
+function go(step) {
+  $$("[data-step]").forEach((el) => (el.hidden = el.dataset.step !== step));
+  const s = steps(), idx = s.indexOf(step);
+  $("#prog").hidden = step === "done" || s.length < 2;
+  $("#prog").innerHTML = s.map((_, i) => `<i class="${i <= idx ? "on" : ""}"></i>`).join("");
+  $("#sheet").scrollTop = 0;
+  if (step === "details") {
+    const call = co.mode === "consultation";
+    $("#slotbox").hidden = !call; $("#topic-field").hidden = !call; $("#details-back").hidden = !call;
+    $("#mentor-fields").hidden = call; $("#goal-field").hidden = call;
+    if (call) $("#slot-label").textContent = `${pretty(co.date)} · ${to12(co.time)}`;
+    setTimeout(() => $("#d-name").focus({ preventScroll: true }), 50);
+  }
+}
+function openModal(mode, date, time) {
+  co.mode = mode; co.date = date || ""; co.time = time || "";
+  $("#m-eyebrow").textContent = M().eyebrow;
+  $("#m-title").textContent = M().title();
+  $("#send-label").textContent = M().cta;
+  $("#send-err").hidden = true;
+  slotPicker($("#m-days"), $("#m-times"), A.daysAhead, co, () => ($("#slot-next").disabled = !(co.date && co.time)));
+  $("#slot-next").disabled = !(co.date && co.time);
+  modal.hidden = false;
+  document.documentElement.style.overflow = "hidden";
+  go(mode === "consultation" && !(date && time) ? "slot" : "details");
+}
+function closeModal() { modal.hidden = true; document.documentElement.style.overflow = ""; }
+document.addEventListener("click", (e) => {
+  const o = e.target.closest("[data-open]");
+  if (o) { e.preventDefault(); openModal(o.dataset.open); return; }
+  if (e.target.closest("[data-close]")) { closeModal(); return; }
+  const g = e.target.closest("[data-goto]");
+  if (g) go(g.dataset.goto);
+});
+addEventListener("keydown", (e) => { if (e.key === "Escape" && !modal.hidden) closeModal(); });
+$("#slot-next").addEventListener("click", () => go("details"));
+$("#details").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if ($("#d-hp").value) return;
+  const checks = [[$("#d-name"), nameOk], [$("#d-phone"), phoneOk], [$("#d-email"), emailOk]];
+  if (co.mode === "mentorship") checks.push([$("#d-country"), nameOk]);
+  if (!validate(checks)) return;
+  const btn = $("#send-btn"); btn.disabled = true;
+  const r = makeRef(M().ref);
+  const call = co.mode === "consultation";
+  const data = {
+    Reference: r, Request: M().request,
+    Name: $("#d-name").value, "WhatsApp / phone": $("#d-phone").value, Email: $("#d-email").value, City: $("#d-city").value, "You are": $("#d-profile").value,
+    ...(call ? { "Slot (PKT)": `${pretty(co.date)} at ${to12(co.time)}`, Topic: $("#d-topic").value } : { Country: $("#d-country").value, "Preferred start": $("#d-start").value, Goal: $("#d-goal").value, Price: pkr(A.mentorPrice) }),
+  };
+  const [mailed, saved] = await Promise.all([
+    sendMail(`Academy · ${data.Request} · ${data.Name} (${r})`, data),
+    saveInquiry({ kind: co.mode, name: data.Name, email: data.Email || null, phone: data["WhatsApp / phone"], message: (call ? data.Topic : data.Goal) || null,
+      details: { ref: r, city: data.City, profile: data["You are"], ...(call ? { slot: data["Slot (PKT)"] } : { country: data.Country, start: data["Preferred start"] }), source: source() } }),
+  ]);
+  btn.disabled = false;
+  const waMsg = call
+    ? `Hi Yahya! I booked a free consultation on ${pretty(co.date)} at ${to12(co.time)} (ref ${r}). Name: ${data.Name}.`
+    : `Hi Yahya! I applied for the premium 1-on-1 mentorship (ref ${r}). Name: ${data.Name}, ${data.Country}.`;
+  if (!mailed && !saved) {
+    const er = $("#send-err"); er.hidden = false;
+    er.innerHTML = `Couldn't send right now. <a href="${waLink(waMsg)}" target="_blank" rel="noopener noreferrer">Send it on WhatsApp instead</a>; it has all your details.`;
+    return;
+  }
+  track(M().ev, {}); track("Lead", { content_name: co.mode });
+  $("#done-title").textContent = M().done;
+  $("#done-text").textContent = M().text;
+  $("#done-ref").textContent = "Ref " + r;
+  $("#done-wa").href = waLink(waMsg);
+  go("done");
+});
+</script>
+</body>
+</html>

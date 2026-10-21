@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Student Area · Yahya Ali Academy</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#110d0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffb21e'/%3E%3Cstop offset='.5' stop-color='%23ff5a1f'/%3E%3Cstop offset='1' stop-color='%23ff2d55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='28' text-anchor='middle' fill='white'%3EYA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body class="app">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M10 8.5l5.5 3.5-5.5 3.5z" fill="currentColor"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2L20 3M16 7l3 3M18 5l2 2"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l4-4 5 2 5-2 4 4-7 7-2-2-2 2-2-2-2 2-2-2"/><path d="M12 9l-3 3 2 2 3-3"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 01-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1121 11.5z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5a1 1 0 011-1h3M16 4h3a1 1 0 011 1v3M20 16v3a1 1 0 01-1 1h-3M8 20H5a1 1 0 01-1-1v-3"/><path d="M7 12h10"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0M16 4.5a3.5 3.5 0 010 7M21.5 20a6.5 6.5 0 00-4-6"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8S10.5 3 8 4s0 4 4 4zm0 0s1.5-5 4-4 0 4-4 4z"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-inf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.7-3.6-4-5.5-4a4 4 0 000 8c1.9 0 3.5-1.3 5.5-4zm0 0c2 2.7 3.6 4 5.5 4a4 4 0 000-8c-1.9 0-3.5 1.3-5.5 4z"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h15a1 1 0 011 1v11a1 1 0 01-1 1H5a1 1 0 01-1-1V6a2 2 0 012-2h11"/><circle cx="16" cy="13.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.87 9.87 0 0012.04 2zm5.8 14.04c-.24.68-1.42 1.32-1.96 1.37-.5.05-.97.24-3.28-.68-2.78-1.1-4.55-3.95-4.69-4.13-.13-.18-1.12-1.49-1.12-2.85s.71-2.02.97-2.3c.25-.27.55-.34.73-.34l.53.01c.17 0 .4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.28.14.44.12.6-.07.16-.18.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.6.76 1.88.9.28.14.46.2.53.32.07.12.07.68-.17 1.36z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10.5" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 018 0v3"/></symbol>
+  <symbol id="i-unlock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10.5" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 017.6-1.7"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4h3a2 2 0 012 2v12a2 2 0 01-2 2h-3M10 16l-4-4 4-4M6 12h10"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7M5 9.5V20h14V9.5"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 10-2.3 5.7M20 4v7h-7"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4.5 4.5 0 006.4 0l3-3a4.5 4.5 0 00-6.4-6.4l-1 1M14 10a4.5 4.5 0 00-6.4 0l-3 3a4.5 4.5 0 006.4 6.4l1-1"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5a7 7 0 10-14 0C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+</svg>
+
+<header class="app-top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Yahya Ali Academy home">
+      <span class="mono" aria-hidden="true">YA</span>
+      <span><b>Yahya Ali</b><small>STUDENT AREA</small></span>
+    </a>
+    <div class="who" id="who" hidden>
+      <span id="who-email"></span>
+      <button class="icon-btn" id="logout"><svg><use href="#i-out"/></svg>Log out</button>
+    </div>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="glow"></div>
+  <div class="wrap">
+
+    <div id="v-loading"><div class="spin" aria-label="Loading"></div></div>
+
+    <!-- LOGIN / SIGN UP -->
+    <div id="v-auth" hidden>
+      <div class="center">
+        <p class="eyebrow">Student area</p>
+        <h1 class="app-h" style="margin-top:1rem" id="auth-h">Create your account</h1>
+        <p class="app-sub" id="auth-sub">Then pay and upload your screenshot. Your 14 classes unlock as soon as I approve it.</p>
+        <div class="paper" style="margin-top:1.8rem">
+          <div class="tabs" role="tablist">
+            <button type="button" data-tab="signup" class="on" role="tab">Create account</button>
+            <button type="button" data-tab="login" role="tab">Log in</button>
+          </div>
+          <form id="auth" class="fgrid" novalidate>
+            <div class="field" id="f-name"><label for="u-name">Full name</label><input id="u-name" autocomplete="name"><p class="err">Please enter your full name</p></div>
+            <div class="field"><label for="u-email">Email</label><input id="u-email" type="email" autocomplete="email" inputmode="email"><p class="err">Please enter a valid email</p></div>
+            <div class="field"><label for="u-pass">Password</label><input id="u-pass" type="password" autocomplete="new-password" minlength="6"><p class="err">At least 6 characters</p></div>
+            <p class="alert" id="auth-err" hidden></p>
+            <p class="ok-note" id="auth-ok" hidden></p>
+            <button class="btn btn-primary btn-block" type="submit" id="auth-btn"><span id="auth-label">Create account</span><svg><use href="#i-arrow"/></svg></button>
+            <p class="muted" style="text-align:center;font-size:.9rem" id="forgot" hidden>Forgot your password? <a data-wa="Hi Yahya! I forgot my Academy password. My email is: " href="#" target="_blank" rel="noopener noreferrer" style="font-weight:700">Message me on WhatsApp</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENROL: pay + upload screenshot -->
+    <div id="v-enrol" hidden>
+      <div class="enrol-grid">
+        <div>
+          <p class="eyebrow">Step 2 of 2</p>
+          <h1 class="app-h" style="margin-top:1rem">Pay &amp; upload your screenshot</h1>
+          <p class="app-sub">Your classes unlock as soon as I confirm the payment, usually within a few hours.</p>
+          <div class="sum" style="margin-top:1.8rem">
+            <div class="cover">
+              <span class="bigmono" aria-hidden="true">YA</span>
+              <span class="tag">YAHYA ALI ACADEMY</span>
+              <div><h3 id="plan-title">14-day program</h3><p class="meta"><svg><use href="#i-play"/></svg><span id="plan-meta">14 classes · 1 hour each · 2 weeks</span></p></div>
+            </div>
+            <div class="course-body">
+              <div class="price-row" style="margin-top:0;padding-top:0;border:0"><div><small>Amount to pay</small><div class="num" id="plan-price"></div></div></div>
+              <ol class="steps-mini">
+                <li>Send the amount to one of the accounts</li>
+                <li>Take a screenshot of the payment</li>
+                <li>Upload it here and submit</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <form class="paper fgrid" id="enrol" novalidate>
+          <div>
+            <h4 style="font-family:var(--body);font-weight:700;font-size:1rem">Pay with</h4>
+            <div class="methods four" id="methods" role="group" aria-label="Payment method">
+              <button type="button" class="method on" data-method="bank" aria-pressed="true"><svg><use href="#i-bank"/></svg>Bank</button>
+              <button type="button" class="method" data-method="jazzcash" aria-pressed="false"><svg><use href="#i-phone"/></svg>JazzCash</button>
+              <button type="button" class="method" data-method="easypaisa" aria-pressed="false"><svg><use href="#i-wallet"/></svg>Easypaisa</button>
+              <button type="button" class="method" data-method="intl" aria-pressed="false"><svg><use href="#i-send"/></svg>International</button>
+            </div>
+            <div class="acct" id="acct"></div>
+          </div>
+          <div class="fgrid two">
+            <div class="field"><label for="e-name">Full name</label><input id="e-name" autocomplete="name"><p class="err">Please enter your full name</p></div>
+            <div class="field"><label for="e-phone">WhatsApp number</label><input id="e-phone" inputmode="tel" autocomplete="tel" placeholder="03xx xxxxxxx"><p class="err">Please enter a valid WhatsApp number</p></div>
+          </div>
+          <div class="fgrid two">
+            <div class="field"><label for="e-city">City</label><input id="e-city" autocomplete="address-level2"><p class="err">Please enter your city</p></div>
+            <div class="field"><label for="e-country">Country</label><input id="e-country" autocomplete="country-name" value="Pakistan"><p class="err">Please enter your country</p></div>
+          </div>
+          <div class="field"><label for="e-ref">Transaction ID (TID) <small>Optional</small></label><input id="e-ref" placeholder="From your payment receipt"></div>
+          <div class="field" id="shot-field">
+            <label for="e-shot">Payment screenshot</label>
+            <label class="drop" id="drop">
+              <input id="e-shot" type="file" accept="image/*,application/pdf">
+              <span id="drop-in"><svg><use href="#i-upload"/></svg><b>Tap to upload the screenshot</b><small>JPG, PNG or PDF · up to 8 MB</small></span>
+            </label>
+            <p class="err" id="shot-err">Please upload your payment screenshot</p>
+          </div>
+          <p class="alert" id="enrol-err" hidden></p>
+          <button class="btn btn-primary btn-block" type="submit" id="enrol-btn"><svg><use href="#i-shield"/></svg><span>Submit for approval</span></button>
+          <p class="muted" style="text-align:center;font-size:.9rem">Problem paying? <a data-wa="Hi Yahya! I need help paying for the Academy." href="#" target="_blank" rel="noopener noreferrer" style="font-weight:700">WhatsApp me</a></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- PENDING / REJECTED -->
+    <div id="v-status" hidden>
+      <div class="center">
+        <div class="paper status">
+          <div class="badge-ok wait" id="st-badge"><svg><use href="#i-clock"/></svg></div>
+          <h3 id="st-title">Payment under review</h3>
+          <p id="st-text">Thanks! I'm checking your payment now. This page unlocks automatically once it's approved, usually within a few hours.</p>
+          <dl class="kv" id="st-kv"></dl>
+          <div class="fgrid" style="margin-top:1.4rem">
+            <button class="btn btn-primary btn-block" id="st-retry" hidden><svg><use href="#i-upload"/></svg>Upload again</button>
+            <a class="btn btn-wa btn-block" id="st-wa" href="#" target="_blank" rel="noopener noreferrer"><svg><use href="#i-wa"/></svg>Message me on WhatsApp</a>
+            <button class="text-btn" id="st-refresh" type="button">Check again</button>
+          </div>
+        </div>
+      </div>
+      <div class="locked">
+        <h4>Your 14 classes</h4>
+        <div class="lock-list" id="lock-list"></div>
+      </div>
+    </div>
+
+    <!-- OTHER DEVICE -->
+    <div id="v-device" hidden>
+      <div class="center">
+        <div class="paper status">
+          <div class="badge-ok wait"><svg><use href="#i-lock"/></svg></div>
+          <h3>Opened on another device</h3>
+          <p>Your account was just opened on another phone or computer. For security, it can only be used on one device at a time.</p>
+          <div class="fgrid" style="margin-top:1.4rem">
+            <button class="btn btn-primary btn-block" id="dev-take"><svg><use href="#i-phone"/></svg>Use it on this device</button>
+            <button class="text-btn" id="dev-out" type="button">Log out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLASSROOM -->
+    <div id="v-room" hidden>
+      <div class="room">
+        <div>
+          <div class="player nosel" id="player"></div>
+          <div class="p-bar">
+            <div class="left">
+              <button class="small-btn" id="prev"><svg><use href="#i-left"/></svg>Previous</button>
+              <button class="small-btn" id="next">Next<svg><use href="#i-arrow"/></svg></button>
+            </div>
+            <div class="left">
+              <button class="small-btn" id="full"><svg><use href="#i-scan"/></svg>Full screen</button>
+              <button class="small-btn" id="mark"><svg><use href="#i-check"/></svg><span>Mark as done</span></button>
+            </div>
+          </div>
+          <div class="lesson-info nosel">
+            <span class="k" id="l-k"></span>
+            <h2 id="l-title"></h2>
+            <p id="l-sum"></p>
+            <ul class="lessons" id="l-topics"></ul>
+            <div class="res" id="l-res" hidden></div>
+          </div>
+          <p class="protect-note"><svg><use href="#i-shield"/></svg><span>These classes are for your account only. Each video carries your name and number, and your account works on one device at a time. Please don't record or share them.</span></p>
+        </div>
+        <aside class="side">
+          <div class="prog-card"><b id="pr-t"></b><small id="pr-s"></small><div class="meter"><i id="pr-bar" style="width:0"></i></div></div>
+          <div id="cl-list"></div>
+        </aside>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="assets/config.js"></script>
+<script src="assets/classes.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/sb.js"></script>
+<script>
+const params = new URLSearchParams(location.search);
+const PLANS = {
+  course: { title: "14-day program", meta: "14 classes · 1 hour each · 2 weeks", price: A.coursePrice, label: "COURSE" },
+  mentorship: { title: "1-on-1 live mentorship", meta: `${A.mentorDays} live Zoom sessions + all 14 classes`, price: A.mentorPrice, label: "MENTORSHIP" },
+};
+const plan = PLANS[params.get("plan")] ? params.get("plan") : "course";
+const st = { user: null, enrol: null, classes: CLASSES, videos: {}, done: new Set(), current: 1, method: "bank", file: null, mode: "signup" };
+
+function show(v) {
+  ["loading", "auth", "enrol", "status", "device", "room"].forEach((k) => ($("#v-" + k).hidden = k !== v));
+  if (v !== "room") stopWatermark();
+  scrollTo(0, 0);
+}
+
+/* ── Auth ── */
+function setMode(m) {
+  st.mode = m;
+  $$("[data-tab]").forEach((b) => b.classList.toggle("on", b.dataset.tab === m));
+  $("#f-name").hidden = m !== "signup";
+  $("#auth-h").textContent = m === "signup" ? "Create your account" : "Welcome back";
+  $("#auth-sub").textContent = m === "signup" ? "Then pay and upload your screenshot. Your 14 classes unlock as soon as I approve it." : "Log in to continue to your classes.";
+  $("#auth-label").textContent = m === "signup" ? "Create account" : "Log in";
+  $("#u-pass").autocomplete = m === "signup" ? "new-password" : "current-password";
+  $("#forgot").hidden = m === "signup";
+  $("#auth-err").hidden = true; $("#auth-ok").hidden = true;
+}
+$$("[data-tab]").forEach((b) => b.addEventListener("click", () => setMode(b.dataset.tab)));
+$("#auth").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const checks = [[$("#u-email"), emailReq], [$("#u-pass"), (v) => v.length >= 6]];
+  if (st.mode === "signup") checks.unshift([$("#u-name"), nameOk]);
+  if (!validate(checks)) return;
+  const btn = $("#auth-btn"); btn.disabled = true;
+  const err = $("#auth-err"); err.hidden = true;
+  const email = $("#u-email").value.trim().toLowerCase(), password = $("#u-pass").value;
+  let res;
+  if (st.mode === "signup") {
+    res = await sb.auth.signUp({ email, password, options: { data: { full_name: $("#u-name").value.trim() }, emailRedirectTo: location.origin + location.pathname } });
+    if (!res.error && !res.data.session) res = await sb.auth.signInWithPassword({ email, password });
+    if (res.error && /confirm/i.test(res.error.message)) {
+      btn.disabled = false;
+      $("#auth-ok").hidden = false; $("#auth-ok").textContent = "Account created. Please open the link we emailed you, then log in here.";
+      setMode("login"); $("#auth-ok").hidden = false;
+      return;
+    }
+  } else {
+    res = await sb.auth.signInWithPassword({ email, password });
+  }
+  btn.disabled = false;
+  if (res.error) {
+    err.hidden = false;
+    const m = res.error.message || "";
+    err.textContent = /already registered|already exists/i.test(m) ? "This email already has an account. Please log in instead."
+      : /invalid login/i.test(m) ? "Email or password is wrong. Please try again."
+      : m;
+    if (/already/i.test(m)) setMode("login"), (err.hidden = false);
+    return;
+  }
+  await sb.rpc("claim_device", { p_device: DEVICE, p_label: deviceLabel() });
+  boot();
+});
+$("#logout").addEventListener("click", async () => { await sb.auth.signOut(); location.reload(); });
+
+/* ── Enrol ── */
+function drawPlan() {
+  const p = PLANS[plan];
+  $("#plan-title").textContent = p.title; $("#plan-meta").textContent = p.meta; $("#plan-price").textContent = pkr(p.price);
+  $("#acct").innerHTML = acctHtml(st.method);
+}
+$("#methods").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-method]"); if (!b) return;
+  st.method = b.dataset.method;
+  $$(".method").forEach((m) => { m.classList.toggle("on", m === b); m.setAttribute("aria-pressed", m === b); });
+  $("#acct").innerHTML = acctHtml(st.method);
+});
+function setFile(f) {
+  const field = $("#shot-field");
+  if (!f) return;
+  if (f.size > 8 * 1024 * 1024) { field.classList.add("bad"); $("#shot-err").textContent = "That file is over 8 MB. Please upload a smaller screenshot."; return; }
+  st.file = f; field.classList.remove("bad");
+  $("#drop-in").innerHTML = f.type.startsWith("image/")
+    ? `<img src="${URL.createObjectURL(f)}" alt="Your payment screenshot"><small>${esc(f.name)} · tap to change</small>`
+    : `${svg("i-note")}<b>${esc(f.name)}</b><small>Tap to change</small>`;
+}
+$("#e-shot").addEventListener("change", (e) => setFile(e.target.files[0]));
+["dragover", "dragleave", "drop"].forEach((t) => $("#drop").addEventListener(t, (e) => {
+  e.preventDefault(); $("#drop").classList.toggle("over", t === "dragover");
+  if (t === "drop" && e.dataTransfer.files[0]) setFile(e.dataTransfer.files[0]);
+}));
+$("#enrol").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const ok = validate([[$("#e-name"), nameOk], [$("#e-phone"), phoneOk], [$("#e-city"), nameOk], [$("#e-country"), nameOk]]);
+  if (!st.file) { $("#shot-field").classList.add("bad"); $("#shot-err").textContent = "Please upload your payment screenshot"; }
+  if (!ok || !st.file) return;
+  const btn = $("#enrol-btn"); btn.disabled = true;
+  const err = $("#enrol-err"); err.hidden = true;
+  const ext = (st.file.name.split(".").pop() || "jpg").toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 5) || "jpg";
+  const path = `${st.user.id}/${Date.now()}.${ext}`;
+  const up = await sb.storage.from("payment-proofs").upload(path, st.file, { contentType: st.file.type || "image/jpeg", upsert: false });
+  if (up.error) { btn.disabled = false; err.hidden = false; err.textContent = "Upload failed: " + up.error.message + ". Please try again."; return; }
+  const row = {
+    email: st.user.email, full_name: $("#e-name").value.trim(), phone: $("#e-phone").value.trim(), city: $("#e-city").value.trim(), country: $("#e-country").value.trim(),
+    plan, amount: PLANS[plan].price, pay_method: st.method, payment_ref: $("#e-ref").value.trim() || null, screenshot_path: path,
+  };
+  const ins = await sb.from("enrollments").insert(row).select().single();
+  btn.disabled = false;
+  if (ins.error) { err.hidden = false; err.textContent = "Couldn't submit: " + ins.error.message; return; }
+  sendMail(`Academy · NEW PAYMENT to approve · ${row.full_name} · ${pkr(row.amount)}`, {
+    Request: "PAYMENT SCREENSHOT · " + PLANS[plan].label, Name: row.full_name, Email: row.email, "WhatsApp / phone": row.phone, City: row.city, Country: row.country,
+    Amount: pkr(row.amount), "Payment method": METHOD_NAME[row.pay_method], "TID": row.payment_ref || "-", "Approve here": location.origin + location.pathname.replace(/portal(\.html)?$/, "admin.html"),
+  });
+  track("Purchase", { value: row.amount, currency: "PKR" });
+  st.enrol = ins.data;
+  route();
+});
+
+/* ── Status ── */
+function drawStatus() {
+  const e = st.enrol, rej = e.status === "rejected";
+  $("#st-badge").innerHTML = svg(rej ? "i-x" : "i-clock");
+  $("#st-title").textContent = rej ? "Payment not confirmed" : "Payment under review";
+  $("#st-text").textContent = rej
+    ? (e.admin_note ? `Note from Yahya: ${e.admin_note}` : "I couldn't confirm this payment. Please upload the correct screenshot or message me on WhatsApp.")
+    : "Thanks! I'm checking your payment now. This page unlocks automatically once it's approved, usually within a few hours.";
+  $("#st-retry").hidden = !rej;
+  $("#st-kv").innerHTML = [["Program", PLANS[e.plan]?.title || e.plan], ["Amount", pkr(e.amount)], ["Paid with", METHOD_NAME[e.pay_method] || e.pay_method], ["Submitted", fmtDate(e.created_at)]]
+    .map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+  $("#st-wa").href = waLink(`Hi Yahya! I uploaded my payment for the Academy. Name: ${e.full_name}, email: ${e.email}.`);
+  $("#lock-list").innerHTML = st.classes.map((c) => `<div><b>${pad2(c.day)}</b><span>${esc(c.title)}</span>${svg("i-lock")}</div>`).join("");
+}
+$("#st-retry").addEventListener("click", () => { st.enrol = null; show("enrol"); drawPlan(); prefill(); });
+$("#st-refresh").addEventListener("click", () => boot());
+let pollT;
+function pollApproval() {
+  clearInterval(pollT);
+  pollT = setInterval(async () => {
+    if (!st.enrol || st.enrol.status !== "pending") return clearInterval(pollT);
+    const { data } = await sb.from("enrollments").select("*").eq("id", st.enrol.id).maybeSingle();
+    if (data && data.status !== "pending") { clearInterval(pollT); boot(); }
+  }, 30000);
+}
+
+/* ── One device at a time ── */
+let devT;
+async function deviceIsMine() {
+  const { data } = await sb.from("active_devices").select("device_id").eq("user_id", st.user.id).maybeSingle();
+  if (!data) { await sb.rpc("claim_device", { p_device: DEVICE, p_label: deviceLabel() }); return true; }
+  return data.device_id === DEVICE;
+}
+function watchDevice() {
+  clearInterval(devT);
+  devT = setInterval(async () => { if (!(await deviceIsMine())) { clearInterval(devT); st.videos = {}; show("device"); } }, 20000);
+}
+$("#dev-take").addEventListener("click", async () => { await sb.rpc("claim_device", { p_device: DEVICE, p_label: deviceLabel() }); boot(); });
+$("#dev-out").addEventListener("click", async () => { await sb.auth.signOut(); location.reload(); });
+
+/* ── Classroom ── */
+let wmT;
+function stopWatermark() { clearInterval(wmT); }
+function watermarkText() {
+  const e = st.enrol || {};
+  return [e.full_name, e.phone, st.user?.email].filter(Boolean).join(" · ");
+}
+function drawPlayer() {
+  const c = st.classes.find((x) => x.day === st.current);
+  const v = st.videos[st.current];
+  const emb = v && videoEmbed(v.video_url);
+  const p = $("#player");
+  stopWatermark();
+  if (!emb) {
+    p.innerHTML = `<div class="soon"><div>${svg("i-video")}<b>Class ${c.day} is coming soon</b><span>The video will appear here as soon as it's uploaded.</span></div></div>`;
+  } else {
+    const media = emb.type === "video"
+      ? `<video src="${esc(emb.src)}" controls controlsList="nodownload noremoteplayback noplaybackrate" disablepictureinpicture playsinline preload="metadata"></video>`
+      : `<iframe src="${esc(emb.src)}" title="${esc(c.title)}" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    const tiles = Array.from({ length: 12 }, (_, i) => `<span class="wm tile" style="left:${(i % 3) * 34 + 2}%;top:${Math.floor(i / 3) * 25 + 8}%">${esc(watermarkText())}</span>`).join("");
+    p.innerHTML = media + tiles + `<span class="wm" id="wm">${esc(watermarkText())}</span><div class="shield" id="shield" hidden><div><b>Paused</b><span>Come back to this tab to keep watching.</span></div></div>`;
+    const wm = $("#wm");
+    const move = () => { wm.style.left = 4 + Math.random() * 56 + "%"; wm.style.top = 6 + Math.random() * 80 + "%"; };
+    move(); wmT = setInterval(move, 4000);
+    p.querySelector("video")?.addEventListener("contextmenu", (e) => e.preventDefault());
+  }
+  $("#l-k").textContent = `WEEK ${c.week} · DAY ${c.day} · 1 HOUR`;
+  $("#l-title").textContent = c.title;
+  $("#l-sum").textContent = c.summary;
+  $("#l-topics").innerHTML = (c.topics || []).map((t) => `<li><span>${esc(t)}</span></li>`).join("");
+  $("#l-res").hidden = !(v && v.resources);
+  $("#l-res").textContent = v?.resources || "";
+  $("#prev").disabled = st.current === 1;
+  $("#next").disabled = st.current === st.classes.length;
+  const done = st.done.has(st.current);
+  $("#mark").classList.toggle("done", done);
+  $("#mark span").textContent = done ? "Done" : "Mark as done";
+  drawSide();
+}
+function drawSide() {
+  const n = st.done.size, total = st.classes.length;
+  $("#pr-t").textContent = `${n} of ${total} classes done`;
+  $("#pr-s").textContent = n === total ? "Course complete. Well done!" : `Next up: Class ${Math.min(...st.classes.map((c) => c.day).filter((d) => !st.done.has(d)))}`;
+  $("#pr-bar").style.width = (n / total) * 100 + "%";
+  $("#cl-list").innerHTML = [1, 2].map((w) => `<h5>WEEK ${w}</h5>` + st.classes.filter((c) => c.week === w).map((c) => {
+    const fin = st.done.has(c.day);
+    return `<button class="cl${c.day === st.current ? " on" : ""}${fin ? " fin" : ""}" data-day="${c.day}"><span class="n">${fin ? svg("i-check") : pad2(c.day)}</span><span>${esc(c.title)}<small>${st.videos[c.day] ? "1 hour" : "Coming soon"}</small></span></button>`;
+  }).join("")).join("");
+}
+function openClass(d) { st.current = d; drawPlayer(); try { localStorage.setItem("ya_last", d); } catch {} if (innerWidth < 1100) $("#player").scrollIntoView({ behavior: "smooth", block: "start" }); }
+$("#cl-list").addEventListener("click", (e) => { const b = e.target.closest("[data-day]"); if (b) openClass(+b.dataset.day); });
+$("#prev").addEventListener("click", () => openClass(st.current - 1));
+$("#next").addEventListener("click", () => openClass(st.current + 1));
+$("#mark").addEventListener("click", async () => {
+  const d = st.current;
+  if (st.done.has(d)) { st.done.delete(d); await sb.from("class_progress").delete().eq("user_id", st.user.id).eq("day", d); }
+  else { st.done.add(d); await sb.from("class_progress").upsert({ user_id: st.user.id, day: d }); if (d < st.classes.length) toast(`Class ${d} done. See you tomorrow for class ${d + 1}!`); }
+  drawPlayer();
+});
+$("#full").addEventListener("click", () => {
+  const p = $("#player");
+  if (document.fullscreenElement) document.exitFullscreen();
+  else (p.requestFullscreen || p.webkitRequestFullscreen)?.call(p);
+});
+
+/* Deterrents: hide the class when the tab is hidden, block right-click and common save/capture shortcuts. */
+document.addEventListener("visibilitychange", () => { const s = $("#shield"); if (s) s.hidden = !document.hidden; });
+document.addEventListener("contextmenu", (e) => { if (e.target.closest(".player, .lesson-info")) e.preventDefault(); });
+document.addEventListener("keydown", (e) => {
+  const k = e.key.toLowerCase();
+  if ($("#v-room").hidden) return;
+  if (k === "printscreen" || ((e.ctrlKey || e.metaKey) && ["s", "p", "u"].includes(k)) || (e.metaKey && e.shiftKey && ["3", "4", "5"].includes(k))) {
+    e.preventDefault();
+    const s = $("#shield"); if (s) { s.hidden = false; setTimeout(() => (s.hidden = document.hidden ? false : true), 2500); }
+    try { navigator.clipboard.writeText(""); } catch {}
+  }
+});
+addEventListener("beforeprint", () => { document.body.style.visibility = "hidden"; });
+addEventListener("afterprint", () => { document.body.style.visibility = ""; });
+
+async function openRoom() {
+  if (!(await deviceIsMine())) return show("device");
+  const [cls, vids, prog] = await Promise.all([
+    sb.from("classes").select("*").eq("published", true).order("day"),
+    sb.from("class_videos").select("day, video_url, resources"),
+    sb.from("class_progress").select("day"),
+  ]);
+  if (cls.data?.length) st.classes = cls.data;
+  st.videos = Object.fromEntries((vids.data || []).map((v) => [v.day, v]));
+  st.done = new Set((prog.data || []).map((p) => p.day));
+  let last = 0; try { last = +localStorage.getItem("ya_last") || 0; } catch {}
+  const firstOpen = st.classes.map((c) => c.day).find((d) => !st.done.has(d)) || 1;
+  st.current = st.classes.some((c) => c.day === last) ? last : firstOpen;
+  show("room");
+  drawPlayer();
+  watchDevice();
+}
+
+/* ── Router ── */
+function prefill() {
+  const m = st.user?.user_metadata || {};
+  if (!$("#e-name").value) $("#e-name").value = m.full_name || "";
+}
+function route() {
+  const e = st.enrol;
+  if (!e) { show("enrol"); drawPlan(); prefill(); return; }
+  if (e.status === "approved") return openRoom();
+  show("status"); drawStatus();
+  if (e.status === "pending") pollApproval();
+}
+async function boot() {
+  show("loading");
+  const { data: { session } } = await sb.auth.getSession();
+  st.user = session?.user || null;
+  $("#who").hidden = !st.user;
+  if (!st.user) { show("auth"); setMode(params.get("plan") ? "signup" : "login"); return; }
+  $("#who-email").textContent = st.user.email;
+  const { data } = await sb.from("enrollments").select("*").order("created_at", { ascending: false });
+  const list = data || [];
+  st.enrol = list.find((x) => x.status === "approved") || list[0] || null;
+  route();
+}
+sb.auth.onAuthStateChange((ev) => { if (ev === "SIGNED_OUT") { st.user = null; } });
+boot();
+</script>
+</body>
+</html>
