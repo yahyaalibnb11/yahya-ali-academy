@@ -120,7 +120,7 @@ const Player = (() => {
   async function load(host, slug, opts = {}) {
     destroy(); build(host); onTime = opts.onTime || null;
     q(".pl-spin").hidden = false;
-    const r = await fn("play", { slug, device: DEVICE });
+    const r = await fn("acad-play", { slug, device: DEVICE });
     q(".pl-spin").hidden = true;
     if (!r.ok) {
       const e = r.data?.error;
