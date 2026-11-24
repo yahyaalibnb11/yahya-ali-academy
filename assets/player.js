@@ -137,7 +137,7 @@ const Player = (() => {
     const master = "#EXTM3U\n#EXT-X-VERSION:3\n" + variants.map((v) => `#EXT-X-STREAM-INF:BANDWIDTH=${v.bw},RESOLUTION=${v.res}\n${mk(v.playlist)}`).join("\n") + "\n";
     const src = mk(master);
     if (window.Hls && Hls.isSupported()) {
-      hls = new Hls({ maxBufferLength: 30, maxMaxBufferLength: 60, capLevelToPlayerSize: true, startLevel: -1, abrEwmaDefaultEstimate: 1500000, fragLoadingMaxRetry: 6, keyLoadingMaxRetry: 4 });
+      hls = new Hls({ maxBufferLength: 40, maxMaxBufferLength: 90, backBufferLength: 30, maxBufferHole: 0.5, nudgeMaxRetry: 6, capLevelToPlayerSize: true, startLevel: 0, startFragPrefetch: true, abrEwmaDefaultEstimate: 1200000, abrBandWidthUpFactor: 0.6, fragLoadingMaxRetry: 6, keyLoadingMaxRetry: 4 });
       hls.loadSource(src); hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, () => { if (opts.start) video.currentTime = opts.start; });
       hls.on(Hls.Events.LEVEL_SWITCHED, (_, d) => { if (hls.autoLevelEnabled) q(".pl-q").textContent = "Auto · " + hls.levels[d.level].height + "p"; });
