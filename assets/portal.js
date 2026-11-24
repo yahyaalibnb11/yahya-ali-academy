@@ -30,6 +30,7 @@
       options: { data: { full_name: name, phone, app: "academy" }, emailRedirectTo: location.origin + location.pathname } });
     busy(e.target, false);
     if (error) return authMsg(/registered|exists/i.test(error.message) ? "Ye email pehle se registered hai. Login karein." : error.message, "err");
+    if (data.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) { tab("login"); $("#liEmail").value = $("#suEmail").value.trim(); return authMsg("Is email ka account pehle se bana hua hai. Apne purane password se login karein, ya \"Password bhool gaye?\" dabayein.", "err"); }
     if (!data.session) return authMsg("Account ban gaya. Aap ki email pe confirmation link bheja hai; usay khol ke login karein.", "ok");
     await afterLogin(true);
   };
