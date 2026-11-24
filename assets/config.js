@@ -1,7 +1,8 @@
 /* ═══════════ YAHYA ALI ACADEMY · SETTINGS (edit these) ═══════════ */
 window.ACADEMY = {
-  supabaseUrl: "https://ebvrmxxfxujqlbxcigmo.supabase.co",
-  supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVidnJteHhmeHVqcWxieGNpZ21vIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI2MDU2NjksImV4cCI6MjEwODE4MTY2OX0.X4PM9MtPrszEps5MG0rOGrqRKHYpU_ppvUXkddPqmp4",
+  /* Backend: "academy" section inside the ember-os Supabase project (acad_* tables). Move to its own project later by changing these two lines. */
+  supabaseUrl: "https://dwfelduzybgtqbyuvlse.supabase.co",
+  supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR3ZmVsZHV6eWJndHFieXV2bHNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4ODQwODEsImV4cCI6MjEwNzQ2MDA4MX0.LFQqwnvmsyHlEtoOOqkixkmVRGR1IPW43QX7KeHfdds",
   coursePrice: 5000,
   instagram: "https://www.instagram.com/yahyaalii.bnb/",
 
