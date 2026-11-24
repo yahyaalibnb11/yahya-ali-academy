@@ -5,7 +5,10 @@
   const ALL = C.modules.flatMap((m) => m.lessons.map(([id, t, d, v]) => ({ id, t, d, v, m })));
   const S = { user: null, profile: null, enrolled: false, admin: false, progress: {}, pay: null, cur: null, loadedSlug: null, pollT: null };
 
-  const show = (id) => { $("#auth").hidden = id !== "auth"; $("#app").hidden = id !== "app"; $("#boot").style.opacity = 0; setTimeout(() => $("#boot").remove?.(), 400); };
+  const show = (id) => {
+    $("#auth").hidden = id !== "auth"; $("#app").hidden = id !== "app";
+    const boot = $("#boot"); if (boot) { boot.style.opacity = 0; setTimeout(() => boot.remove(), 400); }
+  };
 
   /* ---------- AUTH ---------- */
   function tab(which) {
@@ -77,6 +80,7 @@
     $("#avatar").textContent = name.trim()[0]?.toUpperCase() || "S";
     $("#umName").textContent = name; $("#umEmail").textContent = S.user.email;
     $("#umAdmin").hidden = !S.admin;
+    $("#topEnroll").hidden = S.enrolled; $("#upsell").hidden = S.enrolled;
     const chip = $("#accessChip"); chip.textContent = S.enrolled ? "Full access" : "Free preview"; chip.className = "chip " + (S.enrolled ? "ok" : "ember");
     renderSide(); renderProgress(); renderEnroll(); renderToolkit();
   }

@@ -49,29 +49,48 @@
 
   /* calculator (Lesson 1.2 style) */
   const ids = ["cAdr", "cNights", "cRent", "cRun"], el = Object.fromEntries(ids.map((k) => [k, $("#" + k)]));
-  const cal = $("#calCal"); for (let i = 0; i < 30; i++) cal.append(document.createElement("i"));
+  const out = { cAdr: $("#oAdr"), cNights: $("#oNights"), cRent: $("#oRent"), cRun: $("#oRun") };
+  const cal = $("#calCal"); for (let i = 0; i < 31; i++) cal.append(document.createElement("i"));
+  const UNITS = { 1: [8000, 20, 60000, 25000], 2: [12000, 20, 90000, 35000], 3: [16000, 18, 130000, 45000], h: [25000, 16, 200000, 70000] };
   const prev = {};
+  const showVal = (k) => { const v = +el[k].value; if (document.activeElement !== out[k]) out[k].value = k === "cNights" ? v : fmt(v); };
   function tween(node, to, f) {
     const from = prev[node.id] ?? to; prev[node.id] = to;
     if (reduce || !window.gsap) { node.textContent = f(to); return; }
     const o = { v: from }; gsap.to(o, { v: to, duration: 0.5, ease: "power2.out", onUpdate: () => (node.textContent = f(o.v)) });
   }
   function calc() {
-    ids.forEach((k) => { const i = el[k]; i.style.setProperty("--p", ((i.value - i.min) / (i.max - i.min)) * 100 + "%"); });
+    ids.forEach((k) => { const i = el[k]; i.style.setProperty("--p", ((i.value - i.min) / (i.max - i.min)) * 100 + "%"); showVal(k); });
     const adr = +el.cAdr.value, n = +el.cNights.value, rent = +el.cRent.value, run = +el.cRun.value;
-    $("#oAdr").textContent = fmt(adr); $("#oNights").textContent = n; $("#oRent").textContent = fmt(rent); $("#oRun").textContent = fmt(run);
     const rev = adr * n, fee = rev * 0.03, cost = rent + run, profit = rev - fee - cost;
-    const be = Math.ceil(cost / (adr * 0.97));
+    const be = adr > 0 ? Math.ceil(cost / (adr * 0.97)) : 99;
     tween($("#rRev"), rev, fmt); tween($("#rFee"), fee, (v) => "− " + fmt(v)); tween($("#rCost"), cost, (v) => "− " + fmt(v));
     tween($("#rProfit"), profit, (v) => (v < 0 ? "− " : "") + fmt(Math.abs(v)));
     $("#rProfit").classList.toggle("neg", profit < 0);
-    $("#rBe").textContent = be > 30 ? "30+ raatein" : be + " raatein";
+    $("#rBe").textContent = be > 31 ? "31+ raatein (loss)" : be + " raatein";
     [...cal.children].forEach((c, i) => c.classList.toggle("on", i < n));
     document.querySelectorAll(".calc-quick button").forEach((b) => b.classList.toggle("on", +b.dataset.n === n));
   }
-  ids.forEach((k) => el[k].addEventListener("input", calc));
+  const setUnit = (u) => {
+    const v = UNITS[u]; ids.forEach((k, i) => (el[k].value = v[i]));
+    document.querySelectorAll(".calc-units button").forEach((b) => b.classList.toggle("on", b.dataset.u === u)); calc();
+  };
+  ids.forEach((k) => {
+    el[k].addEventListener("input", calc);
+    const o = out[k];
+    o.addEventListener("focus", () => { o.value = el[k].value; o.select(); });
+    o.addEventListener("input", () => {
+      const raw = +o.value.replace(/[^0-9]/g, ""); if (!o.value.trim()) return;
+      const v = Math.min(+el[k].max, Math.max(+el[k].min, raw)); el[k].value = v;
+      const i = el[k]; i.style.setProperty("--p", ((i.value - i.min) / (i.max - i.min)) * 100 + "%");
+      calc();
+    });
+    o.addEventListener("blur", () => { calc(); });
+    o.addEventListener("keydown", (e) => { if (e.key === "Enter") o.blur(); });
+  });
   document.querySelectorAll(".calc-quick button").forEach((b) => b.addEventListener("click", () => { el.cNights.value = b.dataset.n; calc(); }));
-  calc();
+  document.querySelectorAll(".calc-units button").forEach((b) => b.addEventListener("click", () => setUnit(b.dataset.u)));
+  setUnit("1");
 
   /* watermark demo in platform mock */
   const wm = $("#ppWm");

@@ -15,8 +15,8 @@
   --cool: #86c8ff;         /* data / system */
   --ok: #4fd18b;
   --bad: #ff5d6c;
-  --f-display: "Unbounded", "Manrope", system-ui, sans-serif;
-  --f-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-display: "Bricolage Grotesque", "Plus Jakarta Sans", system-ui, sans-serif;
+  --f-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --r: 14px;
   --gut: max(16px, env(safe-area-inset-left, 0px));
@@ -32,7 +32,7 @@ body {
 img { max-width: 100%; display: block; }
 [hidden] { display: none !important; }
 a { color: inherit; }
-h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 600; letter-spacing: -0.02em; line-height: 1.08; margin: 0; text-wrap: balance; }
+h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 800; letter-spacing: -0.022em; line-height: 1.04; margin: 0; text-wrap: balance; }
 p { margin: 0; }
 .mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
 .eyebrow { font: 600 12px/1 var(--f-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ember-2); }
@@ -74,7 +74,7 @@ p { margin: 0; }
 .chip.ok { color: var(--ok); border-color: rgba(79,209,139,.35); background: rgba(79,209,139,.07); }
 .chip.cool { color: var(--cool); border-color: rgba(134,200,255,.3); background: rgba(134,200,255,.06); }
 
-.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 700 15px/1 var(--f-display); letter-spacing: -.01em; }
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 800 17px/1 var(--f-display); letter-spacing: -.02em; }
 .logo-mark { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: radial-gradient(circle at 30% 25%, var(--ember-2), var(--ember) 55%, #b9361a); color: #1a0a02; font: 800 13px/1 var(--f-display); box-shadow: 0 0 24px rgba(255,122,61,.45); }
 .logo small { display: block; font: 600 10px/1.2 var(--f-mono); letter-spacing: .18em; color: var(--mute); text-transform: uppercase; margin-top: 3px; }
 

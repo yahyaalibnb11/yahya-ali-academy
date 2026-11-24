@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#06080e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="assets/brand.css">
 <link rel="stylesheet" href="assets/portal.css">
 </head>
@@ -66,6 +66,7 @@
       <div><b class="mono" id="progPct">0%</b><span id="progTxt">0 / 46 lessons</span></div>
     </div>
     <div class="top-r">
+      <a class="btn btn-primary btn-sm" id="topEnroll" href="#enroll" hidden>Enroll · <span class="mono">Rs 5,000</span></a>
       <span class="chip" id="accessChip">Free account</span>
       <div class="user">
         <button class="icon-btn" id="userBtn" type="button" aria-haspopup="true" aria-expanded="false"><span class="avatar" id="avatar">S</span></button>
@@ -89,6 +90,10 @@
   <main class="main" id="main">
     <!-- lesson view -->
     <section id="lessonView">
+      <div class="upsell" id="upsell" hidden>
+        <div><b>Aap free preview dekh rahe hain.</b><span>Poora course (46 lessons + toolkit) unlock karne ke liye Rs 5,000 ki one-time payment karein.</span></div>
+        <a class="btn btn-primary btn-sm" href="#enroll">Payment kaise karein →</a>
+      </div>
       <div class="crumbs mono" id="crumbs"></div>
       <div class="stage" id="stage"></div>
       <div class="lesson-meta">
@@ -117,6 +122,11 @@
           <h2>46 lessons, <span class="grad">lifetime</span></h2>
           <div class="e-price"><span>Rs</span><b class="mono">5,000</b><em>one-time</em></div>
           <ul class="e-list"><li>Saare modules aur naye lessons</li><li>4-file toolkit</li><li>Progress aur homework</li><li>HD streaming</li></ul>
+          <ol class="e-steps">
+            <li><b>Payment bhejein</b><span>Neeche diye account pe Rs 5,000 JazzCash, Easypaisa ya bank se.</span></li>
+            <li><b>Proof submit karein</b><span>Transaction ID likhein aur screenshot upload karein.</span></li>
+            <li><b>Course unlock</b><span>Payment confirm hote hi ye page khud khul jata hai.</span></li>
+          </ol>
         </div>
         <div class="enroll-r" id="enrollR"></div>
       </div>

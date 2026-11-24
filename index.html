@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#06080e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="assets/brand.css">
 <link rel="stylesheet" href="assets/landing.css">
 </head>
@@ -131,27 +131,31 @@
         <p class="calc-note">Ye sirf example hai. Asal numbers aap ke shehar, area aur unit pe depend karte hain. Course mein aap apne area ka asli data nikalna seekhenge.</p>
       </div>
       <div class="calc" id="calc">
+        <div class="calc-units" role="group" aria-label="Unit type">
+          <button type="button" data-u="1">1 Bed</button><button type="button" data-u="2">2 Bed</button><button type="button" data-u="3">3 Bed</button><button type="button" data-u="h">House</button>
+        </div>
         <div class="calc-row">
           <label for="cAdr">Ek raat ki price</label>
-          <output class="mono" id="oAdr">Rs 8,500</output>
-          <input type="range" id="cAdr" min="4000" max="20000" step="500" value="8500">
+          <input class="calc-num mono" id="oAdr" data-for="cAdr" inputmode="numeric" aria-label="Ek raat ki price (Rs)">
+          <input type="range" id="cAdr" min="2000" max="100000" step="500" value="8000">
         </div>
         <div class="calc-row">
           <label for="cNights">Mahine mein booked raatein</label>
-          <output class="mono" id="oNights">18</output>
-          <input type="range" id="cNights" min="5" max="30" step="1" value="18">
-          <div class="calc-quick" role="group" aria-label="Quick nights"><button type="button" data-n="18">18</button><button type="button" data-n="20">20</button><button type="button" data-n="24">24</button></div>
+          <input class="calc-num mono" id="oNights" data-for="cNights" inputmode="numeric" aria-label="Booked raatein">
+          <input type="range" id="cNights" min="1" max="31" step="1" value="20">
+          <div class="calc-quick" role="group" aria-label="Quick nights"><button type="button" data-n="15">15</button><button type="button" data-n="20">20</button><button type="button" data-n="25">25</button><button type="button" data-n="31">31</button></div>
         </div>
         <div class="calc-row">
           <label for="cRent">Mahana kiraya</label>
-          <output class="mono" id="oRent">Rs 60,000</output>
-          <input type="range" id="cRent" min="25000" max="200000" step="5000" value="60000">
+          <input class="calc-num mono" id="oRent" data-for="cRent" inputmode="numeric" aria-label="Mahana kiraya (Rs)">
+          <input type="range" id="cRent" min="10000" max="500000" step="5000" value="60000">
         </div>
         <div class="calc-row">
-          <label for="cRun">Bills, cleaning, supplies</label>
-          <output class="mono" id="oRun">Rs 30,000</output>
-          <input type="range" id="cRun" min="10000" max="80000" step="2500" value="30000">
+          <label for="cRun">Bills, cleaning, maintenance, supplies</label>
+          <input class="calc-num mono" id="oRun" data-for="cRun" inputmode="numeric" aria-label="Mahana kharche (Rs)">
+          <input type="range" id="cRun" min="0" max="500000" step="2500" value="25000">
         </div>
+        <p class="calc-tip">Value pe tap kar ke exact number bhi likh sakte hain.</p>
         <div class="calc-out">
           <div class="calc-cal" id="calCal" aria-hidden="true"></div>
           <dl>
