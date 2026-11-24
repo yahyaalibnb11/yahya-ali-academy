@@ -26,12 +26,17 @@
   $("#fSignup").onsubmit = async (e) => {
     e.preventDefault(); busy(e.target, true);
     const name = $("#suName").value.trim(), phone = $("#suPhone").value.trim();
-    const { data, error } = await sb.auth.signUp({ email: $("#suEmail").value.trim(), password: $("#suPass").value,
-      options: { data: { full_name: name, phone, app: "academy" }, emailRedirectTo: location.origin + location.pathname } });
+    const email = $("#suEmail").value.trim(), password = $("#suPass").value;
+    const r = await fn("acad-signup", { name, phone, email, password });
+    if (!r.ok) {
+      busy(e.target, false);
+      const er = r.data?.error;
+      if (er === "exists") { tab("login"); $("#liEmail").value = email; return authMsg("Is email ka account pehle se bana hua hai. Apne password se login karein, ya \"Password bhool gaye?\" dabayein.", "err"); }
+      return authMsg(er === "email" ? "Email sahi likhein." : er === "password" ? "Password kam az kam 6 characters ka ho." : er === "details" ? "Poora naam aur sahi WhatsApp number likhein." : er === "too_many" ? "Bohat zyada koshishein. 10 minute baad try karein." : "Account nahi bana. Internet check kar ke dobara try karein.", "err");
+    }
+    const { error } = await sb.auth.signInWithPassword({ email, password });
     busy(e.target, false);
-    if (error) return authMsg(/registered|exists/i.test(error.message) ? "Ye email pehle se registered hai. Login karein." : error.message, "err");
-    if (data.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) { tab("login"); $("#liEmail").value = $("#suEmail").value.trim(); return authMsg("Is email ka account pehle se bana hua hai. Apne purane password se login karein, ya \"Password bhool gaye?\" dabayein.", "err"); }
-    if (!data.session) return authMsg("Account ban gaya. Aap ki email pe confirmation link bheja hai; usay khol ke login karein.", "ok");
+    if (error) { tab("login"); $("#liEmail").value = email; return authMsg("Account ban gaya. Ab login karein.", "ok"); }
     await afterLogin(true);
   };
   $("#forgot").onclick = async () => {
