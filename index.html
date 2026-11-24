@@ -3,307 +3,454 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Yahya Ali Academy</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<title>Yahya Ali Academy · Airbnb Arbitrage Mukammal Course</title>
 <meta name="description" content="Airbnb Arbitrage Mukammal Course by Yahya Ali: 9 modules, 46 recorded lessons in Roman Urdu. Pehli unit se profit tak. Rs 5,000, lifetime access.">
+<meta name="theme-color" content="#110d0a">
 <meta property="og:title" content="Airbnb Arbitrage Mukammal Course · Yahya Ali Academy">
 <meta property="og:description" content="9 modules · 46 lessons · Roman Urdu · Lifetime access for Rs 5,000">
 <meta property="og:image" content="assets/img/yahya.jpg">
-<meta name="theme-color" content="#06080e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffb21e'/%3E%3Cstop offset='.5' stop-color='%23ff5a1f'/%3E%3Cstop offset='1' stop-color='%23ff2d55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='28' text-anchor='middle' fill='white'%3EYA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="assets/brand.css">
-<link rel="stylesheet" href="assets/landing.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/home.css">
+<style>
+/* Landing-only additions */
+.top-actions{display:flex;align-items:center;gap:.6rem}
+.login-link{display:none;align-items:center;gap:.45rem;height:2.9rem;padding:0 1.1rem;border-radius:999px;border:1px solid var(--line-2);font-weight:600;font-size:.95rem;text-decoration:none;color:var(--cream)}
+.login-link svg{width:1.05rem;height:1.05rem}
+.login-link:hover{border-color:rgba(255,244,232,.5)}
+@media(min-width:760px){.login-link{display:inline-flex}}
+.cover .cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;mix-blend-mode:luminosity}
+.seats{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;font-weight:700;font-size:.92rem;color:var(--gold)}
+.seats svg{width:1rem;height:1rem}
+
+/* Real units gallery */
+.gal-sec{padding-block:clamp(4rem,8vw,7rem) 0}
+.gal{display:grid;gap:.8rem;margin-top:2.6rem;grid-template-columns:repeat(2,1fr);grid-auto-rows:9.5rem}
+@media(min-width:760px){.gal{grid-template-columns:repeat(4,1fr);grid-auto-rows:12rem}}
+@media(min-width:1100px){.gal{grid-auto-rows:14rem}}
+.gal figure{position:relative;margin:0;overflow:hidden;border-radius:1.2rem;border:1px solid var(--line);background:linear-gradient(135deg,#2a1d14,#1b1511)}
+.gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(17,13,10,.55),transparent 45%);pointer-events:none}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.gal figure:hover img{transform:scale(1.05)}
+.gal .big{grid-column:span 2;grid-row:span 2}
+.gal .tall{grid-row:span 2}
+.gal-note{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;margin-top:1.4rem;color:var(--cream-faint);font-size:.95rem}
+.gal-note span{display:flex;align-items:center;gap:.45rem}
+.gal-note svg{width:1rem;height:1rem;color:var(--ember)}
+
+/* How enrolment works */
+.flow4{display:grid;gap:1rem;margin-top:3rem;counter-reset:s}
+@media(min-width:760px){.flow4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.flow4{grid-template-columns:repeat(4,1fr)}}
+.flow4 article{position:relative;border:1px solid var(--line);border-radius:1.4rem;padding:1.6rem;background:rgba(27,21,17,.6)}
+.flow4 .ico{width:2.8rem;height:2.8rem;border-radius:.9rem}
+.flow4 .k{position:absolute;right:1.4rem;top:1.4rem;font:600 .85rem/1 var(--mono);color:var(--cream-faint)}
+.flow4 h3{margin-top:1.1rem;font-size:1.3rem;line-height:1.15}
+.flow4 p{margin-top:.5rem;color:var(--cream-dim);font-size:.97rem}
+
+/* 14-class curriculum */
+.week-h{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin:0 0 .8rem;padding:0 .3rem}
+.week-h b{font:800 1.35rem/1 var(--display);letter-spacing:-.02em}
+.week-h span{font:600 .85rem/1 var(--mono);color:var(--cream-faint)}
+.mods+.week-h{margin-top:2.2rem}
+.mod-n small{display:block;margin-top:.35rem;font:600 .62rem/1 var(--mono);letter-spacing:.08em;color:var(--cream-faint)}
+
+.plan .amt .free{font:800 clamp(2.7rem,2.2rem + 1.6vw,3.7rem)/.95 var(--display);letter-spacing:-.04em}
+</style>
 </head>
 <body>
-<div class="cursor-glow" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M10 8.5l5.5 3.5-5.5 3.5z" fill="currentColor"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2L20 3M16 7l3 3M18 5l2 2"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l4-4 5 2 5-2 4 4-7 7-2-2-2 2-2-2-2 2-2-2"/><path d="M12 9l-3 3 2 2 3-3"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 01-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1121 11.5z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5a1 1 0 011-1h3M16 4h3a1 1 0 011 1v3M20 16v3a1 1 0 01-1 1h-3M8 20H5a1 1 0 01-1-1v-3"/><path d="M7 12h10"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0M16 4.5a3.5 3.5 0 010 7M21.5 20a6.5 6.5 0 00-4-6"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8S10.5 3 8 4s0 4 4 4zm0 0s1.5-5 4-4 0 4-4 4z"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-inf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.7-3.6-4-5.5-4a4 4 0 000 8c1.9 0 3.5-1.3 5.5-4zm0 0c2 2.7 3.6 4 5.5 4a4 4 0 000-8c-1.9 0-3.5 1.3-5.5 4z"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h15a1 1 0 011 1v11a1 1 0 01-1 1H5a1 1 0 01-1-1V6a2 2 0 012-2h11"/><circle cx="16" cy="13.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.87 9.87 0 0012.04 2zm5.8 14.04c-.24.68-1.42 1.32-1.96 1.37-.5.05-.97.24-3.28-.68-2.78-1.1-4.55-3.95-4.69-4.13-.13-.18-1.12-1.49-1.12-2.85s.71-2.02.97-2.3c.25-.27.55-.34.73-.34l.53.01c.17 0 .4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.28.14.44.12.6-.07.16-.18.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.6.76 1.88.9.28.14.46.2.53.32.07.12.07.68-.17 1.36z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10.5" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 018 0v3"/></symbol>
+  <symbol id="i-unlock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10.5" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 017.6-1.7"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4h3a2 2 0 012 2v12a2 2 0 01-2 2h-3M10 16l-4-4 4-4M6 12h10"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7M5 9.5V20h14V9.5"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 10-2.3 5.7M20 4v7h-7"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4.5 4.5 0 006.4 0l3-3a4.5 4.5 0 00-6.4-6.4l-1 1M14 10a4.5 4.5 0 00-6.4 0l-3 3a4.5 4.5 0 006.4 6.4l1-1"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5a7 7 0 10-14 0C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+</svg>
 
-<header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a class="logo" href="#top"><span class="logo-mark">YA</span><span>Yahya Ali<small>Academy</small></span></a>
-    <nav class="nav-links" aria-label="Main">
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Yahya Ali Academy, back to top">
+      <span class="mono" aria-hidden="true">YA</span>
+      <span><b>Yahya Ali</b><small>ACADEMY</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
       <a href="#curriculum">Curriculum</a>
       <a href="#calculator">Calculator</a>
-      <a href="#platform">Platform</a>
-      <a href="#mentor">Mentor</a>
+      <a href="#how">Enroll kaise</a>
+      <a href="#instructor">Mentor</a>
+      <a href="#pricing">Price</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <div class="nav-cta">
-      <a class="btn btn-ghost btn-sm" href="portal.html">Login</a>
-      <a class="btn btn-primary btn-sm" href="portal.html#enroll">Enroll</a>
+    <div class="top-actions">
+      <a class="login-link" href="portal.html"><svg><use href="#i-user"/></svg>Student login</a>
+      <a class="btn btn-primary" href="portal.html#enroll"><span>Enroll · Rs 5,000</span></a>
     </div>
   </div>
 </header>
 
-<main id="top">
-  <!-- HERO -->
-  <section class="hero">
-    <canvas id="hero3d" aria-hidden="true"></canvas>
-    <div class="hero-fade" aria-hidden="true"></div>
-    <div class="wrap hero-in">
-      <div class="hero-copy">
-        <div class="hero-badge"><span class="dot"></span> Enrollment open · Recorded course · Roman Urdu</div>
-        <h1 class="hero-title">
-          <span class="line">Airbnb Arbitrage.</span>
-          <span class="line"><span class="grad">Pehli unit</span> se</span>
-          <span class="line">profit tak.</span>
+<main>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="dots"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="pill rise"><span class="live"></span><span>Recorded course · 46 lessons · Enrollment open</span></p>
+        <h1>
+          <span class="ln" style="animation-delay:.08s">Airbnb Arbitrage.</span>
+          <span class="ln grad" style="animation-delay:.18s">Pehli unit se</span>
+          <span class="ln" style="animation-delay:.28s">profit tak.</span>
         </h1>
-        <p class="hero-sub">Bina apni property ke Airbnb business shuru karein. Budget, landlord deal, listing, pricing aur operations: woh poora system jis se main <b>200+ listings</b> chala raha hoon, 46 lessons mein.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="portal.html#enroll">Enroll now · <span class="mono">Rs 5,000</span></a>
-          <a class="btn btn-ghost" href="portal.html#preview"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg> Free preview dekhein</a>
+        <p class="lead rise" style="animation-delay:.45s">Bina apni property ke Airbnb business shuru karein. Budget, landlord deal, listing, pricing aur operations: woh poora system jis se main <strong style="color:var(--cream)">200+ listings</strong> chala raha hoon, 46 lessons mein.</p>
+        <div class="cta-row rise" style="animation-delay:.55s">
+          <a class="btn btn-primary" href="portal.html#enroll"><span>Enroll karein · Rs 5,000</span><svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="portal.html#l-0-1"><svg><use href="#i-play"/></svg>Free preview dekhein</a>
         </div>
-        <ul class="hero-stats" aria-label="Course at a glance">
-          <li><b class="mono" data-count="9">9</b><span>Modules</span></li>
-          <li><b class="mono" data-count="46">46</b><span>Lessons</span></li>
-          <li><b class="mono" data-count="1500" data-suffix="+">1,500+</b><span>Students</span></li>
-          <li><b class="mono" data-count="200" data-suffix="+">200+</b><span>Listings managed</span></li>
-        </ul>
+        <div class="ticks rise" style="animation-delay:.65s">
+          <span><svg><use href="#i-badge"/></svg>Lifetime access</span>
+          <span><svg><use href="#i-badge"/></svg>JazzCash · Easypaisa · Bank</span>
+          <span><svg><use href="#i-badge"/></svg>Roman Urdu</span>
+        </div>
       </div>
-      <div class="hero-hud" aria-hidden="true">
-        <div class="hud-card hud-a">
-          <span class="hud-k">Occupancy</span>
-          <span class="hud-v mono" id="hudOcc">72%</span>
-          <span class="hud-bar"><i style="width:72%"></i></span>
-        </div>
-        <div class="hud-card hud-b">
-          <span class="hud-ping"></span>
-          <div><span class="hud-k">New booking</span><span class="hud-t">3 raatein · F-11, Islamabad</span></div>
-        </div>
-        <div class="hud-card hud-c">
-          <span class="hud-k">Break-even</span>
-          <span class="hud-v mono">14 <small>raatein</small></span>
-        </div>
-        <span class="hud-note">Example numbers</span>
+
+      <div class="card-wrap rise" style="animation-delay:.35s">
+        <article class="course" aria-label="Course summary">
+          <div class="cover">
+            <img class="cover-img" data-photo="0" alt="" onerror="this.remove()">
+            <span class="bigmono" aria-hidden="true">YA</span>
+            <span class="tag">YAHYA ALI ACADEMY</span>
+            <div>
+              <h3>Airbnb Arbitrage<br>Mukammal Course</h3>
+              <p class="meta"><svg><use href="#i-play"/></svg><span>9 modules · 46 lessons · Roman Urdu</span></p>
+            </div>
+          </div>
+          <div class="course-body">
+            <ul class="checks" data-list="includes"></ul>
+            <div class="price-row">
+              <div><small>One-time payment</small><div class="num">Rs 5,000</div></div>
+              <a class="link" href="#curriculum">Saare 46 lessons dekhein</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-    <a class="scroll-cue" href="#curriculum" aria-label="Scroll to curriculum"><span></span></a>
-  </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee" aria-label="Course topics">
-    <div class="marquee-track">
-      <span>Furnished budget</span><i></i><span>Landlord negotiation</span><i></i><span>Agreement · 13 points</span><i></i><span>Hotel Eye registration</span><i></i><span>Listing photography</span><i></i><span>Dynamic pricing</span><i></i><span>Booking.com sync</span><i></i><span>Cleaning SOP</span><i></i><span>5-star reviews</span><i></i><span>AI prompts</span><i></i><span>30 din action plan</span><i></i>
-      <span>Furnished budget</span><i></i><span>Landlord negotiation</span><i></i><span>Agreement · 13 points</span><i></i><span>Hotel Eye registration</span><i></i><span>Listing photography</span><i></i><span>Dynamic pricing</span><i></i><span>Booking.com sync</span><i></i><span>Cleaning SOP</span><i></i><span>5-star reviews</span><i></i><span>AI prompts</span><i></i><span>30 din action plan</span><i></i>
+    <div class="stats">
+      <div><b class="grad" data-count="200" data-suffix="+">200+</b><span>listings managed</span></div>
+      <div><b class="grad" data-count="1500" data-suffix="+">1,500+</b><span>students taught</span></div>
+      <div><b class="grad" data-count="46">46</b><span>recorded lessons</span></div>
+      <div><b class="grad" data-count="9">9</b><span>modules, A se Z</span></div>
     </div>
   </div>
+</section>
 
-  <!-- JOURNEY -->
-  <section class="sec journey">
-    <div class="wrap">
-      <div class="sec-head">
+<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<!-- REAL UNITS -->
+<section class="gal-sec" id="units">
+  <div class="wrap">
+    <div class="split" style="align-items:end">
+      <div>
+        <p class="eyebrow">Theory nahi</p>
+        <h2 class="h2" style="margin-top:1.2rem">Asli units.<br><span class="grad">Asli guests.</span></h2>
+      </div>
+      <p class="lead">Har lesson un units se aata hai jo hum rozana chalate hain. Aap dekhte hain ke unhein kaise set, price aur manage kiya jata hai.</p>
+    </div>
+    <div class="gal" id="gal"></div>
+    <div class="gal-note">
+      <span><svg><use href="#i-home"/></svg>200+ listings managed</span>
+      <span><svg><use href="#i-pin"/></svg>Rawalpindi, Islamabad aur aage</span>
+      <span><svg><use href="#i-star"/></svg>Hostly · Ember Rentals</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL LEARN -->
+<section id="outcomes">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Aap kya seekhenge</p>
+      <h2 class="h2" style="margin-top:1.2rem">Teen skills.<br><span class="grad">Ek business.</span></h2>
+      <p class="lead">Zyada tar courses "Airbnb pe listing kaise banayein" pe ruk jaate hain. Ye course aap ko pehli unit ke hisaab se le kar ek chalte hue system tak le jata hai.</p>
+    </div>
+    <div class="tracks">
+      <article class="trk">
+        <span class="ico"><svg><use href="#i-chart"/></svg></span>
+        <div>
+          <h3>Numbers aur budget</h3>
+          <p>ADR, occupancy aur profit ka asal hisaab. Furnished aur non-furnished ka poora PKR budget, mahana kharche aur break-even.</p>
+          <ul><li>ADR &amp; occupancy</li><li>PKR budget</li><li>Break-even</li><li>Payback</li></ul>
+        </div>
+      </article>
+      <article class="trk">
+        <span class="ico"><svg><use href="#i-key"/></svg></span>
+        <div>
+          <h3>Sahi unit, sahi deal</h3>
+          <p>Area aur property selection, red flags, landlord ko pitch, 13-point agreement aur Hotel Eye registration.</p>
+          <ul><li>Market research</li><li>Landlord pitch</li><li>Agreement</li><li>Hotel Eye</li></ul>
+        </div>
+      </article>
+      <article class="trk">
+        <span class="ico"><svg><use href="#i-bolt"/></svg></span>
+        <div>
+          <h3>Listing aur operations</h3>
+          <p>Photos, title, ranking, Booking.com, dynamic pricing, guest messages, cleaning team, reviews aur AI prompts.</p>
+          <ul><li>Listing jo rank kare</li><li>Dynamic pricing</li><li>Cleaning SOP</li><li>5-star reviews</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY + CALCULATOR (cream) -->
+<section class="cream" id="calculator">
+  <div class="wrap">
+    <div class="split" style="align-items:end">
+      <div>
         <p class="eyebrow">Aap ka raasta</p>
-        <h2>Zero se pehli booking tak, <span class="grad">4 marhale</span></h2>
-        <p class="lead">Course usi tarteeb mein chalta hai jis tarteeb mein ek asli unit banti hai. Har module ke end pe homework hai jo aap ki apni "Mera Airbnb Plan" sheet bharta hai.</p>
+        <h2 class="h2" style="margin-top:1.2rem">Zero se<br>pehli booking tak.</h2>
       </div>
-      <ol class="steps">
-        <li class="step reveal"><span class="step-n mono">M0 – M2</span><h3>Samjhein aur hisaab lagayein</h3><p>Business models, ADR aur occupancy, furnished aur non-furnished ka poora PKR budget, break-even.</p></li>
-        <li class="step reveal"><span class="step-n mono">M3 – M4</span><h3>Sahi unit, sahi deal</h3><p>Area aur property selection, red flags, landlord pitch, 13-point agreement aur Hotel Eye.</p></li>
-        <li class="step reveal"><span class="step-n mono">M5 – M6</span><h3>Listing live, pricing smart</h3><p>Photos, title, description, ranking, Booking.com aur dynamic pricing jo har raat ka sahi rate le.</p></li>
-        <li class="step reveal"><span class="step-n mono">M7 – M8</span><h3>System pe chalayein</h3><p>Guest messages, cleaning team, maintenance, reviews, AI aur aap ka 30 din ka action plan.</p></li>
-      </ol>
+      <p class="lead">Course usi tarteeb mein chalta hai jis tarteeb mein ek asli unit banti hai. Har module ke end pe homework hai jo aap ki apni "Mera Airbnb Plan" sheet bharta hai.</p>
     </div>
-  </section>
-
-  <!-- CURRICULUM -->
-  <section class="sec curriculum" id="curriculum">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Curriculum</p>
-        <h2>9 modules. 46 lessons. <span class="grad">A se Z.</span></h2>
-        <p class="lead">Kisi bhi module pe click karein aur dekhein us ke andar kaun se lessons hain aur aap kya seekhenge.</p>
-      </div>
-      <div class="cur" id="cur">
-        <div class="cur-rail" role="tablist" aria-label="Modules" id="curRail"></div>
-        <div class="cur-panel" id="curPanel" role="tabpanel" aria-live="polite"></div>
-      </div>
+    <div class="agency">
+      <div class="step"><span class="k">M0 – M2</span><h3>Samjhein aur hisaab lagayein</h3><p>Business models, ADR aur occupancy, furnished aur non-furnished ka poora PKR budget, break-even.</p></div>
+      <div class="step"><span class="k">M3 – M4</span><h3>Sahi unit, sahi deal</h3><p>Area aur property selection, red flags, landlord pitch, 13-point agreement aur Hotel Eye.</p></div>
+      <div class="step"><span class="k">M5 – M6</span><h3>Listing live, pricing smart</h3><p>Photos, title, description, ranking, Booking.com aur dynamic pricing jo har raat ka sahi rate le.</p></div>
+      <div class="step"><span class="k">M7 – M8</span><h3>System pe chalayein</h3><p>Guest messages, cleaning team, maintenance, reviews, AI aur aap ka 30 din ka action plan.</p></div>
     </div>
-  </section>
-
-  <!-- CALCULATOR -->
-  <section class="sec calc-sec" id="calculator">
-    <div class="wrap calc-grid">
-      <div class="calc-copy">
-        <p class="eyebrow">Lesson 1.2 ka preview</p>
-        <h2>Pehle hisaab. <span class="grad">Phir paisa.</span></h2>
-        <p class="lead">Course ka pehla asool: ek rupaya lagane se pehle numbers chalayein. Sliders hila ke dekhein ke price aur booked raatein aap ke mahane ke profit ko kaise badalti hain.</p>
-        <p class="calc-note">Ye sirf example hai. Asal numbers aap ke shehar, area aur unit pe depend karte hain. Course mein aap apne area ka asli data nikalna seekhenge.</p>
+    <div class="calc">
+      <div>
+        <p class="eyebrow" style="color:var(--gold)">Lesson 1.2 ka preview · Profit calculator</p>
+        <h3>Pehle hisaab.<br><span class="grad">Phir paisa.</span></h3>
+        <p class="muted" style="margin-top:1rem">Course ka pehla asool: ek rupaya lagane se pehle numbers chalayein. Unit choose karein, sliders hilayein, ya kisi bhi value pe tap kar ke exact number likhein.</p>
+        <p class="note">Ye sirf example hai. Asal numbers aap ke shehar, area aur unit pe depend karte hain. Course mein aap apne area ka asli data nikalna seekhenge.</p>
       </div>
-      <div class="calc" id="calc">
+      <div class="calc-box" id="calc">
         <div class="calc-units" role="group" aria-label="Unit type">
           <button type="button" data-u="1">1 Bed</button><button type="button" data-u="2">2 Bed</button><button type="button" data-u="3">3 Bed</button><button type="button" data-u="h">House</button>
         </div>
         <div class="calc-row">
           <label for="cAdr">Ek raat ki price</label>
-          <input class="calc-num mono" id="oAdr" data-for="cAdr" inputmode="numeric" aria-label="Ek raat ki price (Rs)">
+          <input class="calc-num" id="oAdr" inputmode="numeric" aria-label="Ek raat ki price (Rs)">
           <input type="range" id="cAdr" min="2000" max="100000" step="500" value="8000">
         </div>
         <div class="calc-row">
           <label for="cNights">Mahine mein booked raatein</label>
-          <input class="calc-num mono" id="oNights" data-for="cNights" inputmode="numeric" aria-label="Booked raatein">
+          <input class="calc-num" id="oNights" inputmode="numeric" aria-label="Booked raatein">
           <input type="range" id="cNights" min="1" max="31" step="1" value="20">
           <div class="calc-quick" role="group" aria-label="Quick nights"><button type="button" data-n="15">15</button><button type="button" data-n="20">20</button><button type="button" data-n="25">25</button><button type="button" data-n="31">31</button></div>
         </div>
         <div class="calc-row">
           <label for="cRent">Mahana kiraya</label>
-          <input class="calc-num mono" id="oRent" data-for="cRent" inputmode="numeric" aria-label="Mahana kiraya (Rs)">
+          <input class="calc-num" id="oRent" inputmode="numeric" aria-label="Mahana kiraya (Rs)">
           <input type="range" id="cRent" min="10000" max="500000" step="5000" value="60000">
         </div>
         <div class="calc-row">
           <label for="cRun">Bills, cleaning, maintenance, supplies</label>
-          <input class="calc-num mono" id="oRun" data-for="cRun" inputmode="numeric" aria-label="Mahana kharche (Rs)">
+          <input class="calc-num" id="oRun" inputmode="numeric" aria-label="Mahana kharche (Rs)">
           <input type="range" id="cRun" min="0" max="500000" step="2500" value="25000">
         </div>
-        <p class="calc-tip">Value pe tap kar ke exact number bhi likh sakte hain.</p>
         <div class="calc-out">
           <div class="calc-cal" id="calCal" aria-hidden="true"></div>
-          <dl>
-            <div><dt>Revenue</dt><dd class="mono" id="rRev">Rs 153,000</dd></div>
-            <div><dt>Platform fee (~3%)</dt><dd class="mono" id="rFee">− Rs 4,590</dd></div>
-            <div><dt>Kharche</dt><dd class="mono" id="rCost">− Rs 90,000</dd></div>
-            <div class="calc-profit"><dt>Mahana profit</dt><dd class="mono" id="rProfit">Rs 58,410</dd></div>
-            <div><dt>Break-even</dt><dd class="mono" id="rBe">11 raatein</dd></div>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PLATFORM -->
-  <section class="sec platform" id="platform">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Aap ka members area</p>
-        <h2>Ek private classroom, <span class="grad">sirf aap ke liye</span></h2>
-        <p class="lead">Payment ke baad aap ka account foran unlock hota hai. Har lesson HD mein stream hota hai, aap ki progress save hoti hai, aur course hamesha aap ka rehta hai.</p>
-      </div>
-      <div class="plat-grid">
-        <div class="plat-player reveal" aria-hidden="true">
-          <div class="pp-top"><span class="pp-dot"></span><span class="pp-dot"></span><span class="pp-dot"></span><span class="pp-url mono">academy · Lesson 2.4 · Break-even aur payback</span></div>
-          <div class="pp-screen">
-            <div class="pp-chart">
-              <svg viewBox="0 0 320 150" preserveAspectRatio="none"><defs><linearGradient id="ppg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ff7a3d" stop-opacity=".45"/><stop offset="1" stop-color="#ff7a3d" stop-opacity="0"/></linearGradient></defs><path class="pp-area" d="M0 140 L40 128 L80 118 L120 100 L160 92 L200 70 L240 58 L280 34 L320 22 L320 150 L0 150Z" fill="url(#ppg)"/><path class="pp-line" d="M0 140 L40 128 L80 118 L120 100 L160 92 L200 70 L240 58 L280 34 L320 22" fill="none" stroke="#ffb547" stroke-width="2.5"/><line x1="0" x2="320" y1="96" y2="96" stroke="#86c8ff" stroke-dasharray="4 5" stroke-opacity=".6"/></svg>
-              <span class="pp-be mono">break-even</span>
-            </div>
-            <span class="pp-wm mono" id="ppWm">student@email.com · 03XX-XXXXXXX</span>
-            <div class="pp-ctrl"><span class="pp-play"></span><span class="pp-track"><i></i></span><span class="mono">06:12 / 10:44</span><span class="chip cool">1080p</span></div>
+          <div class="ledger">
+            <div><span>Revenue</span><span id="rRev">Rs 0</span></div>
+            <div><span>Platform fee (~3%)</span><span id="rFee">− Rs 0</span></div>
+            <div><span>Kiraya + kharche</span><span id="rCost">− Rs 0</span></div>
+            <div class="sum"><span style="color:var(--cream);font-weight:700">Mahana profit</span><b class="grad" id="rProfit">Rs 0</b></div>
+            <div class="be"><span>Break-even</span><span id="rBe">0 raatein</span></div>
           </div>
         </div>
-        <ul class="plat-feats">
-          <li class="reveal"><span class="pf-ic">◎</span><div><h3>HD adaptive streaming</h3><p>1080p, 720p aur 480p. Slow internet pe bhi video atakti nahi, quality khud adjust hoti hai.</p></div></li>
-          <li class="reveal"><span class="pf-ic">⌁</span><div><h3>Lifetime access</h3><p>Ek dafa payment. Naye lessons aur updates bhi isi account mein aate rahenge.</p></div></li>
-          <li class="reveal"><span class="pf-ic">▤</span><div><h3>Progress aur homework</h3><p>Har lesson ke saath homework, aur jahan chhora tha wahin se dobara shuru.</p></div></li>
-          <li class="reveal"><span class="pf-ic">⛨</span><div><h3>Protected content</h3><p>Har video pe student ka apna watermark, download band, aur ek waqt mein ek device. Course sirf enrolled students ke liye.</p></div></li>
-        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TOOLKIT -->
-  <section class="sec toolkit">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Bonus toolkit</p>
-        <h2>Ready-made files, <span class="grad">pehle din se</span></h2>
+<!-- CURRICULUM -->
+<section id="curriculum">
+  <div class="wrap split sticky">
+    <div>
+      <p class="eyebrow">Curriculum</p>
+      <h2 class="h2" style="margin-top:1.2rem">9 modules.<br><span class="grad">46 lessons.</span></h2>
+      <p class="lead">Kisi bhi module pe click karein aur dekhein us ke andar kaun se lessons hain aur aap kya seekhenge. Welcome lessons bilkul free hain.</p>
+      <div class="chips">
+        <span><svg><use href="#i-video"/></svg>46 recorded lessons</span>
+        <span><svg><use href="#i-inf"/></svg>Lifetime access</span>
+        <span><svg><use href="#i-chat"/></svg>Roman Urdu</span>
       </div>
-      <div class="tk-grid">
-        <article class="tk reveal"><span class="tk-type mono">XLSX</span><h3>Budget aur break-even calculator</h3><p>Furnished aur non-furnished budget, mahana kharche, payback aur 30–90% occupancy scenarios.</p></article>
-        <article class="tk reveal"><span class="tk-type mono">PDF</span><h3>Lease checklist: 6 sawal</h3><p>Har property visit pe ye 6 sawal. Galat deal shuru hone se pehle ruk jaati hai.</p></article>
-        <article class="tk reveal"><span class="tk-type mono">PDF</span><h3>Sample owner agreement</h3><p>STR permission wala sample agreement, Roman Urdu guide ke saath.</p></article>
-        <article class="tk reveal"><span class="tk-type mono">PDF</span><h3>WhatsApp group texts</h3><p>Group rules, welcome message aur quick replies, copy-paste ready.</p></article>
+      <div class="cta-row" style="margin-top:2rem">
+        <a class="btn btn-primary" href="portal.html#enroll"><span>Enroll · Rs 5,000</span><svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="portal.html#l-0-1"><svg><use href="#i-play"/></svg>Free preview</a>
       </div>
     </div>
-  </section>
+    <ol class="mods" id="mods"></ol>
+  </div>
+</section>
 
-  <!-- MENTOR -->
-  <section class="sec mentor" id="mentor">
-    <div class="wrap mentor-grid">
-      <figure class="mentor-photo reveal">
+<!-- INSTRUCTOR -->
+<section id="instructor">
+  <div class="wrap inst">
+    <div class="photo">
+      <figure>
         <img src="assets/img/yahya.jpg" alt="Yahya Ali" width="600" height="800" loading="lazy">
-        <figcaption><span class="chip ember">Founder · Hostly &amp; Ember Rentals</span></figcaption>
+        <figcaption><b>Yahya Ali</b><span>Founder · Hostly &amp; Ember Rentals</span></figcaption>
       </figure>
-      <div class="mentor-copy">
-        <p class="eyebrow">Aap ka mentor</p>
-        <h2>Rawalpindi ki ek apartment se <span class="grad">200+ listings</span> tak</h2>
-        <p>Main ne Airbnb ka safar Rawalpindi mein ek furnished apartment se shuru kiya. Aaj Hostly aur Ember Rentals ke zariye 200+ listings manage hoti hain, aur 1,500+ students ye business seekh chuke hain.</p>
-        <p>Is course mein wohi system hai jo hum rozana apni units pe chalate hain: asli PKR numbers, asli agreements, asli guest messages. Theory nahi, kaam ka tareeqa.</p>
-        <ul class="mentor-stats">
-          <li><b class="mono">200+</b><span>Listings managed</span></li>
-          <li><b class="mono">1,500+</b><span>Students taught</span></li>
-          <li><b class="mono">2</b><span>Companies founded</span></li>
-        </ul>
-        <a class="btn btn-ghost btn-sm" href="https://www.instagram.com/yahyaalii.bnb/" target="_blank" rel="noopener">Instagram pe follow karein · @yahyaalii.bnb</a>
-      </div>
     </div>
-  </section>
+    <div>
+      <p class="eyebrow">Aap ka mentor</p>
+      <h2 class="h2" style="margin-top:1.2rem">Ek apartment se shuru.<br><span class="grad">Aaj 200+ listings.</span></h2>
+      <p class="lead" style="margin-top:1.8rem">Main ne Airbnb ka safar Rawalpindi mein ek furnished apartment se shuru kiya. Aaj Hostly aur Ember Rentals ke zariye 200+ listings manage hoti hain, aur 1,500+ students ye business seekh chuke hain.</p>
+      <p class="lead">Is course mein wohi system hai jo hum rozana apni units pe chalate hain: asli PKR numbers, asli agreements, asli guest messages. Theory nahi, kaam ka tareeqa.</p>
+      <div class="facts">
+        <div><svg><use href="#i-check"/></svg>200+ listings managed</div>
+        <div><svg><use href="#i-check"/></svg>1,500+ students taught</div>
+        <div><svg><use href="#i-check"/></svg>Founder · Hostly</div>
+        <div><svg><use href="#i-check"/></svg>Founder · Ember Rentals</div>
+      </div>
+      <p style="margin-top:1.8rem"><a class="link" href="https://www.instagram.com/yahyaalii.bnb/" target="_blank" rel="noopener noreferrer">Instagram pe follow karein · @yahyaalii.bnb</a></p>
+    </div>
+  </div>
+</section>
 
-  <!-- PRICING -->
-  <section class="sec pricing" id="pricing">
-    <div class="wrap">
-      <div class="price-card reveal">
-        <div class="price-glow" aria-hidden="true"></div>
-        <div class="price-left">
-          <p class="eyebrow">Enrollment</p>
-          <h2>Poora course. <span class="grad">Ek payment.</span></h2>
-          <div class="price"><span class="price-cur">Rs</span><span class="price-n mono">5,000</span><span class="price-per">lifetime access</span></div>
-          <a class="btn btn-primary" href="portal.html#enroll">Abhi enroll karein</a>
-          <p class="price-pay">JazzCash · Easypaisa · Bank transfer. Payment confirm hote hi course unlock.</p>
-        </div>
-        <ul class="price-list">
-          <li>9 modules, 46 recorded lessons</li>
-          <li>HD streaming, mobile aur laptop dono pe</li>
-          <li>Har lesson ka homework aur progress tracking</li>
-          <li>4-file toolkit: calculator, checklist, agreement, WhatsApp texts</li>
-          <li>Naye lessons aur updates free</li>
-          <li>Course ke end pe live mentorship ka raasta</li>
-        </ul>
-      </div>
+<!-- TOOLKIT -->
+<div class="wrap" style="padding-bottom:clamp(4.5rem,9vw,8.5rem)">
+  <div class="toolkit">
+    <div>
+      <p class="tk-eyebrow"><svg><use href="#i-gift"/></svg>Students ke liye bonus</p>
+      <h2 style="margin-top:1rem">Ready-made files, pehle din se.</h2>
+      <p>Enroll karte hi ye 4 files aap ke account mein download ke liye mil jaati hain, taake har cheez khud zero se na banani pade.</p>
     </div>
-  </section>
+    <div class="tk-list" id="bonuses"></div>
+  </div>
+</div>
 
-  <!-- FAQ -->
-  <section class="sec faq" id="faq">
-    <div class="wrap faq-wrap">
-      <div class="sec-head">
-        <p class="eyebrow">FAQ</p>
-        <h2>Aam sawal</h2>
+<!-- HOW IT WORKS -->
+<section id="how" style="padding-top:0">
+  <div class="wrap">
+    <div class="split" style="align-items:end">
+      <div>
+        <p class="eyebrow">Enroll kaise karein</p>
+        <h2 class="h2" style="margin-top:1.2rem">Pay. Upload.<br><span class="grad">Seekhna shuru.</span></h2>
       </div>
-      <div class="faq-list">
-        <details><summary>Kya apni property hona zaroori hai?</summary><p>Nahi. Arbitrage ka matlab hi ye hai: landlord ki ijazat se apartment kiraye pe lein, set karein, aur short stays pe chalayein. Course mein poora tareeqa hai.</p></details>
-        <details><summary>Course kis zabaan mein hai?</summary><p>Roman Urdu / Urdu mein, aasaan alfaaz mein. Screen pe numbers aur notes saath chalte hain.</p></details>
-        <details><summary>Payment ke baad access kab milta hai?</summary><p>Payment confirm hote hi aap ka account unlock ho jata hai aur saare available lessons foran khul jaate hain.</p></details>
-        <details><summary>Kya main course download kar sakta hoon?</summary><p>Nahi. Course sirf website pe stream hota hai, aap ke apne account se. Har video pe aap ka watermark hota hai aur ek waqt mein ek device pe chalta hai.</p></details>
-        <details><summary>Mobile pe chalega?</summary><p>Haan. Phone, tablet aur laptop, sab pe. Full screen bhi kar sakte hain.</p></details>
-        <details><summary>Co-hosting bhi sikhaya gaya hai?</summary><p>Module 8 mein co-hosting ka concept aur Ember Rentals jaisa model samjhaya gaya hai. Deep co-hosting (owners, deals, scaling) live mentorship ka hissa hai.</p></details>
-        <details><summary>Kya income ki guarantee hai?</summary><p>Nahi. Ye business hai; result aap ki mehnat, area aur faislon pe depend karta hai. Course aap ko sahi system aur galtiyon se bachne ka tareeqa deta hai.</p></details>
-      </div>
+      <p class="lead">Card ki zaroorat nahi. JazzCash, Easypaisa ya bank se payment karein, screenshot upload karein, aur confirm hote hi poora course aap ke account mein khul jata hai.</p>
     </div>
-  </section>
+    <div class="flow4">
+      <article><span class="k">01</span><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Account banayein</h3><p>Naam, WhatsApp number, email aur password. 30 second ka kaam, aur free preview foran khul jata hai.</p></article>
+      <article><span class="k">02</span><span class="ico"><svg><use href="#i-wallet"/></svg></span><h3>Rs 5,000 bhejein</h3><p>JazzCash, Easypaisa ya bank transfer. Account details portal mein milti hain.</p></article>
+      <article><span class="k">03</span><span class="ico"><svg><use href="#i-upload"/></svg></span><h3>Screenshot upload</h3><p>Transaction ID likhein aur payment ka screenshot portal mein upload karein.</p></article>
+      <article><span class="k">04</span><span class="ico"><svg><use href="#i-unlock"/></svg></span><h3>Course unlock</h3><p>Payment confirm hote hi saare lessons aur toolkit aap ke account mein khul jaate hain.</p></article>
+    </div>
+    <div class="protect">
+      <div><svg><use href="#i-video"/></svg><p><b>HD streaming</b><span>1080p, 720p, 480p. Slow internet pe quality khud adjust hoti hai.</span></p></div>
+      <div><svg><use href="#i-phone"/></svg><p><b>Mobile aur laptop</b><span>Phone, tablet, laptop: sab pe chalta hai, full screen bhi.</span></p></div>
+      <div><svg><use href="#i-note"/></svg><p><b>Progress aur homework</b><span>Jahan chhora tha wahin se dobara shuru, har lesson ke saath homework.</span></p></div>
+      <div><svg><use href="#i-shield"/></svg><p><b>Protected content</b><span>Har video pe student ka watermark, download band, ek waqt mein ek device.</span></p></div>
+    </div>
+  </div>
+</section>
 
-  <section class="final">
-    <div class="wrap final-in">
-      <h2>Aap ki pehli unit ka plan <span class="grad">aaj shuru hota hai.</span></h2>
-      <a class="btn btn-primary" href="portal.html#enroll">Enroll · <span class="mono">Rs 5,000</span></a>
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="glow"></div>
+  <div class="wrap" style="position:relative">
+    <div style="text-align:center">
+      <p class="eyebrow">Price</p>
+      <h2 class="h2" style="margin-top:1.2rem">Poora course. <span class="grad">Ek payment.</span></h2>
     </div>
-  </section>
+    <div class="plans one">
+      <article class="plan main">
+        <div class="plan-h"><b>Airbnb Arbitrage Mukammal Course</b><span class="badge">Lifetime</span></div>
+        <p class="sub">9 modules · 46 recorded lessons · Roman Urdu</p>
+        <div class="amt"><b>Rs 5,000</b><span>one-time</span></div>
+        <ul class="checks" data-list="price" data-solid></ul>
+        <a class="btn btn-primary btn-block" href="portal.html#enroll">Abhi enroll karein<svg><use href="#i-arrow"/></svg></a>
+        <p class="pay-note">JazzCash · Easypaisa · Bank transfer</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">FAQ</p>
+      <h2 class="h2" style="margin-top:1.2rem">Aam<br><span class="grad">sawal.</span></h2>
+    </div>
+    <div class="faq" id="faqs"></div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<div class="wrap">
+  <div class="final">
+    <div class="glow"></div>
+    <span class="mono" aria-hidden="true">YA</span>
+    <h2>Aap ki pehli unit ka plan <span class="grad">aaj shuru hota hai.</span></h2>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="portal.html#enroll"><span>Enroll · Rs 5,000</span><svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="portal.html#l-0-1"><svg><use href="#i-play"/></svg>Free preview dekhein</a>
+    </div>
+  </div>
+</div>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot-in">
-    <a class="logo" href="#top"><span class="logo-mark">YA</span><span>Yahya Ali<small>Academy</small></span></a>
-    <p>© 2026 Yahya Ali Academy · Course content ka koi bhi hissa record, share ya resell karna mana hai.</p>
-    <nav><a href="portal.html">Student login</a><a href="https://www.instagram.com/yahyaalii.bnb/" target="_blank" rel="noopener">Instagram</a></nav>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Yahya Ali Academy · Course content record, share ya resell karna mana hai.</span>
+    <nav aria-label="Links">
+      <a href="portal.html">Student login</a>
+      <a href="https://www.instagram.com/yahyaalii.bnb/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="#faq">FAQ</a>
+    </nav>
   </div>
 </footer>
-
-<div class="m-cta"><a class="btn btn-primary" href="portal.html#enroll">Enroll · <span class="mono">Rs 5,000</span></a></div>
-
+<div class="mbar" id="mbar">
+  <div><b>Rs 5,000</b><small>46 lessons · lifetime</small></div>
+  <a class="btn btn-primary" href="portal.html#enroll">Enroll now</a>
+</div>
 <script src="assets/course.js"></script>
-<script src="assets/vendor/gsap.min.js"></script>
-<script src="assets/vendor/ScrollTrigger.min.js"></script>
-<script src="assets/vendor/three.min.js"></script>
-<script src="assets/hero3d.js"></script>
-<script src="assets/landing.js"></script>
+<script src="assets/home.js"></script>
 </body>
 </html>
