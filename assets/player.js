@@ -141,7 +141,7 @@ const Player = (() => {
     const src = mk(master);
     if (window.Hls && Hls.isSupported()) {
       if (hls) { hls.destroy(); hls = null; }
-      hls = new Hls({ maxBufferLength: 40, maxMaxBufferLength: 90, backBufferLength: 30, maxBufferHole: 0.5, nudgeMaxRetry: 6, capLevelToPlayerSize: true, startLevel: 0, startFragPrefetch: true, abrEwmaDefaultEstimate: 1200000, abrBandWidthUpFactor: 0.6, fragLoadingMaxRetry: 6, keyLoadingMaxRetry: 4 });
+      hls = new Hls({ maxBufferLength: 40, maxMaxBufferLength: 90, backBufferLength: 30, maxBufferHole: 0.5, nudgeMaxRetry: 6, startLevel: 0, startFragPrefetch: true, abrEwmaDefaultEstimate: 1200000, abrBandWidthUpFactor: 0.6, fragLoadingMaxRetry: 6, keyLoadingMaxRetry: 4 });
       hls.loadSource(src); hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, () => { if (opts.start) video.currentTime = opts.start; });
       hls.on(Hls.Events.LEVEL_SWITCHED, (_, d) => { if (hls.autoLevelEnabled) q(".pl-q").textContent = "Auto · " + hls.levels[d.level].height + "p"; });
