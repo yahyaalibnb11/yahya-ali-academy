@@ -19,6 +19,7 @@ window.COURSE = {
     "l-3-4": { covers: ["3.4"] },
     "l-3-5": { covers: ["3.5"] },
     "l-3-6": { covers: ["3.6"] },
+    "l-4-1": { covers: ["4.1"] },
     "l-4-5": { covers: ["4.5"] },
   },
 
@@ -65,7 +66,7 @@ window.COURSE = {
       blurb: "Landlord se baat, agreement ke zaroori points, Hotel Eye registration, kam budget furnishing aur inventory.",
       gains: ["Landlord pitch jo STR permission dilaye", "13-point agreement checklist", "Guest-ready unit ki poori inventory"],
       lessons: [
-        ["4.1", "Landlord se baat aur negotiation", "Pitch, objections aur rent negotiate karna."],
+        ["4.1", "Landlord se baat aur negotiation", "Pitch, objections aur rent negotiate karna.", "l-4-1"],
         ["4.2", "Agreement mein kya zaroor likhwana hai", "13 points, sub-letting permission ke exact alfaaz ke saath."],
         ["4.3", "Hotel Eye aur guest registration", "Police registration aur check-in log."],
         ["4.4", "Kam budget mein furnishing aur interior", "Color theme, reference photos aur smart shopping."],
