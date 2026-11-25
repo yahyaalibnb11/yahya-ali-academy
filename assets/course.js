@@ -27,6 +27,7 @@ window.COURSE = {
     "l-4-3": { covers: ["4.3"] },
     "l-4-4": { covers: ["4.4"] },
     "l-4-5": { covers: ["4.5"] },
+    "l-5-1": { covers: ["5.1"] },
   },
 
   modules: [
@@ -82,7 +83,7 @@ window.COURSE = {
       blurb: "Photography, shot list, Airbnb listing step by step, title aur description, ranking aur Booking.com.",
       gains: ["Phone se professional listing photos", "Title formula aur 5-hisson wali description", "Weekly ranking review aur calendar sync"],
       lessons: [
-        ["5.1", "Photography: staging aur lighting", "7 steps se kamra stage karna."],
+        ["5.1", "Photography: staging aur lighting", "7 steps se kamra stage karna.", "l-5-1"],
         ["5.2", "Shot list aur photos ki tarteeb", "20 se 30 photos aur top 5 ki tarteeb."],
         ["5.3", "Airbnb pe listing banana: step by step", "Har setting, recommended options ke saath."],
         ["5.4", "Title aur description jo bookings laayein", "Formula se titles aur structured description."],
