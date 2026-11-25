@@ -26,9 +26,15 @@ const RENDS = [{ name: "1080", bw: 2700000, res: "1920x1080" }, { name: "720", b
 const TTL = 4 * 3600;
 const cache = new Map<string, { at: number; val: { text: string; src: "r2" | "sb" } }>();
 
-// Videos live in Cloudflare R2 (bucket R2_BUCKET) when it holds the lesson; otherwise in Supabase storage (acad-hls).
-const R2_EP = Deno.env.get("R2_ENDPOINT") || "", R2_BUCKET = Deno.env.get("R2_BUCKET") || "";
-const r2 = R2_EP && R2_BUCKET ? new AwsClient({ accessKeyId: Deno.env.get("R2_ACCESS_KEY_ID")!, secretAccessKey: Deno.env.get("R2_SECRET_ACCESS_KEY")!, service: "s3", region: "auto" }) : null;
+// Videos live in Cloudflare R2 when it holds the lesson; otherwise in Supabase storage (acad-hls).
+// R2 config (endpoint, bucket, key id, secret) is read from academy_private.settings like the other secrets.
+let r2: AwsClient | null = null, R2_EP = "", R2_BUCKET = "", r2loaded = false;
+async function loadR2() {
+  if (r2loaded) return; r2loaded = true;
+  const get = async (k: string) => String((await admin.rpc("acad_svc_setting", { p_k: k })).data || "");
+  const [ep, b, id, sec] = await Promise.all(["r2_endpoint", "r2_bucket", "r2_key_id", "r2_secret"].map(get));
+  if (ep && b && id && sec && ep !== "null") { R2_EP = ep; R2_BUCKET = b; r2 = new AwsClient({ accessKeyId: id, secretAccessKey: sec, service: "s3", region: "auto" }); }
+}
 const r2url = (k: string) => `${R2_EP.replace(/\/$/, "")}/${R2_BUCKET}/${k}`;
 async function r2sign(k: string, ttl: number) {
   const u = new URL(r2url(k)); u.searchParams.set("X-Amz-Expires", String(ttl));
@@ -39,6 +45,7 @@ async function playlist(slug: string, rend: string): Promise<{ text: string; src
   const k = `${slug}/${rend}`; const c = cache.get(k);
   if (c && Date.now() - c.at < 600_000) return c.val;
   let val: { text: string; src: "r2" | "sb" } | null = null;
+  await loadR2();
   if (r2) {
     const r = await r2.fetch(r2url(`${k}/index.m3u8`)).catch(() => null);
     if (r?.ok) val = { text: await r.text(), src: "r2" };

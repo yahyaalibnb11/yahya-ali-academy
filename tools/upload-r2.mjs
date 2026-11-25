@@ -1,5 +1,5 @@
 // Upload an encoded lesson's HLS files to Cloudflare R2 and store its AES key in the database.
-// Usage: R2_ENDPOINT=https://<acct>.r2.cloudflarestorage.com R2_BUCKET=... R2_ACCESS_KEY_ID=... R2_SECRET_ACCESS_KEY=... UPLOAD_SECRET=...
+// Usage: R2_ENDPOINT=https://<acct>.r2.cloudflarestorage.com R2_BUCKET=ember-course R2_ACCESS_KEY_ID=... R2_SECRET_ACCESS_KEY=... UPLOAD_SECRET=...
 //        node tools/upload-r2.mjs <hls-dir-of-slug> <slug> <key-file> [renditions=720,480]
 // Needs: npm i aws4fetch (in tools/ or globally). Playlists are uploaded last so a half-uploaded lesson is never served.
 import fs from "node:fs"; import path from "node:path";
