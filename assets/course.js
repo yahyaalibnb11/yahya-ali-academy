@@ -13,6 +13,7 @@ window.COURSE = {
     "l-2-3": { covers: ["2.3"] },
     "l-2-4": { covers: ["2.4"] },
     "l-2-5": { covers: ["2.5"] },
+    "l-3-1": { covers: ["3.1"] },
   },
 
   modules: [
@@ -47,7 +48,7 @@ window.COURSE = {
       blurb: "Sahi shehar aur area, Airbnb se demand check, bina tools ke Pakistan ka market data aur ROI.",
       gains: ["Area shortlist karne ke 5 sawal", "Competitor listings se average price aur band din", "1 rent + 2 securities model pe ROI"],
       lessons: [
-        ["3.1", "Shehar aur area kaise chunein", "Demand, guest type aur rent ka balance."],
+        ["3.1", "Shehar aur area kaise chunein", "Demand, guest type aur rent ka balance.", "l-3-1"],
         ["3.2", "Airbnb search se demand check karna", "5 competitors se weekday price aur occupancy ka andaza."],
         ["3.3", "Bina tools ke market data: Pakistan ka tareeqa", "Calendar tracking, dealers aur building guards se data."],
         ["3.4", "Sahi property kaise pehchanein", "10-point visit checklist."],
