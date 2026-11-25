@@ -29,7 +29,7 @@ Deno.serve(async (req) => {
   if ((await sign(`${s}|${u}|${d}|${e}`)) !== g) return deny(403);
   const { data: chk } = await admin.rpc("acad_svc_check", { p_user: u, p_device: d });
   const row = Array.isArray(chk) ? chk[0] : chk;
-  if (!row?.device_ok || (!row?.enrolled && s !== "intro")) return deny(409);
+  if (!row?.device_ok || (!row?.enrolled && !["intro", "l-0-1", "l-0-2"].includes(s))) return deny(409);
   const { data: hex } = await admin.rpc("acad_svc_key", { p_slug: s });
   if (!hex) return deny(404);
   const bytes = new Uint8Array(String(hex).match(/../g)!.map((h) => parseInt(h, 16)));

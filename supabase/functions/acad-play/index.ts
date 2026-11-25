@@ -20,7 +20,7 @@ export async function sign(msg: string) {
 
 // Returns signed HLS playlists for one video. Checks: logged in, enrolled (or free preview), and this is the student's active device.
 
-const FREE = new Set(["intro"]);
+const FREE = new Set(["intro", "l-0-1", "l-0-2"]);
 const RENDS = [{ name: "1080", bw: 2700000, res: "1920x1080" }, { name: "720", bw: 1450000, res: "1280x720" }, { name: "480", bw: 780000, res: "854x480" }];
 const TTL = 4 * 3600;
 const cache = new Map<string, { at: number; text: string }>();
