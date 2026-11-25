@@ -30,6 +30,7 @@ window.COURSE = {
     "l-5-1": { covers: ["5.1"] },
     "l-5-2": { covers: ["5.2"] },
     "l-5-3": { covers: ["5.3"] },
+    "l-5-4": { covers: ["5.4"] },
   },
 
   modules: [
@@ -88,7 +89,7 @@ window.COURSE = {
         ["5.1", "Photography: staging aur lighting", "7 steps se kamra stage karna.", "l-5-1"],
         ["5.2", "Shot list aur photos ki tarteeb", "20 se 30 photos aur top 5 ki tarteeb.", "l-5-2"],
         ["5.3", "Airbnb pe listing banana: step by step", "Har setting, recommended options ke saath.", "l-5-3"],
-        ["5.4", "Title aur description jo bookings laayein", "Formula se titles aur structured description."],
+        ["5.4", "Title aur description jo bookings laayein", "Formula se titles aur structured description.", "l-5-4"],
         ["5.5", "Ranking aur weekly optimization", "Har Monday 30 minute ka review system."],
         ["5.6", "Booking.com, multi-platform aur calendar sync", "iCal sync aur double booking se bachao."],
       ] },
