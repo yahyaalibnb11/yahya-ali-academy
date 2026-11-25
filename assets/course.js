@@ -17,6 +17,7 @@ window.COURSE = {
     "l-3-3": { covers: ["3.3"] },
     "l-3-4": { covers: ["3.4"] },
     "l-3-5": { covers: ["3.5"] },
+    "l-3-6": { covers: ["3.6"] },
   },
 
   modules: [
@@ -56,7 +57,7 @@ window.COURSE = {
         ["3.3", "Bina tools ke market data: Pakistan ka tareeqa", "Calendar tracking, dealers aur building guards se data.", "l-3-3"],
         ["3.4", "Sahi property kaise pehchanein", "10-point visit checklist.", "l-3-4"],
         ["3.5", "ROI aur break-even ka hisaab: 1 rent + 2 securities model", "Achay, normal aur bure scenario ka ROI.", "l-3-5"],
-        ["3.6", "Red flags: kaun si property bilkul na lein", "9 red flags jo deal ko foran cancel karte hain."],
+        ["3.6", "Red flags: kaun si property bilkul na lein", "9 red flags jo deal ko foran cancel karte hain.", "l-3-6"],
       ] },
     { n: 4, title: "Landlord deal, legal aur setup", tag: "Deal",
       blurb: "Landlord se baat, agreement ke zaroori points, Hotel Eye registration, kam budget furnishing aur inventory.",
