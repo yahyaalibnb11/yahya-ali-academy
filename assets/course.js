@@ -20,6 +20,7 @@ window.COURSE = {
     "l-3-5": { covers: ["3.5"] },
     "l-3-6": { covers: ["3.6"] },
     "l-4-1": { covers: ["4.1"] },
+    "l-4-4": { covers: ["4.4"] },
     "l-4-5": { covers: ["4.5"] },
   },
 
@@ -69,7 +70,7 @@ window.COURSE = {
         ["4.1", "Landlord se baat aur negotiation", "Pitch, objections aur rent negotiate karna.", "l-4-1"],
         ["4.2", "Agreement mein kya zaroor likhwana hai", "13 points, sub-letting permission ke exact alfaaz ke saath."],
         ["4.3", "Hotel Eye aur guest registration", "Police registration aur check-in log."],
-        ["4.4", "Kam budget mein furnishing aur interior", "Color theme, reference photos aur smart shopping."],
+        ["4.4", "Kam budget mein furnishing aur interior", "Color theme, reference photos aur smart shopping.", "l-4-4"],
         ["4.5", "Guest essentials checklist aur inventory", "Har cheez jo guest ko pehli raat chahiye.", "l-4-5"],
       ] },
     { n: 5, title: "Listing creation aur optimization", tag: "Listing",
