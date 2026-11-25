@@ -28,6 +28,7 @@ window.COURSE = {
     "l-4-4": { covers: ["4.4"] },
     "l-4-5": { covers: ["4.5"] },
     "l-5-1": { covers: ["5.1"] },
+    "l-5-2": { covers: ["5.2"] },
   },
 
   modules: [
@@ -84,7 +85,7 @@ window.COURSE = {
       gains: ["Phone se professional listing photos", "Title formula aur 5-hisson wali description", "Weekly ranking review aur calendar sync"],
       lessons: [
         ["5.1", "Photography: staging aur lighting", "7 steps se kamra stage karna.", "l-5-1"],
-        ["5.2", "Shot list aur photos ki tarteeb", "20 se 30 photos aur top 5 ki tarteeb."],
+        ["5.2", "Shot list aur photos ki tarteeb", "20 se 30 photos aur top 5 ki tarteeb.", "l-5-2"],
         ["5.3", "Airbnb pe listing banana: step by step", "Har setting, recommended options ke saath."],
         ["5.4", "Title aur description jo bookings laayein", "Formula se titles aur structured description."],
         ["5.5", "Ranking aur weekly optimization", "Har Monday 30 minute ka review system."],
