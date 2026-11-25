@@ -1,4 +1,5 @@
 import { createClient } from "npm:@supabase/supabase-js@2.45.4";
+import { AwsClient } from "npm:aws4fetch@1.0.20";
 export const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!, { auth: { persistSession: false } });
 export const cors = {
   "Access-Control-Allow-Origin": "*",
@@ -23,14 +24,31 @@ export async function sign(msg: string) {
 const FREE = new Set(["intro", "l-0-1", "l-0-2"]);
 const RENDS = [{ name: "1080", bw: 2700000, res: "1920x1080" }, { name: "720", bw: 1450000, res: "1280x720" }, { name: "480", bw: 780000, res: "854x480" }];
 const TTL = 4 * 3600;
-const cache = new Map<string, { at: number; text: string }>();
+const cache = new Map<string, { at: number; val: { text: string; src: "r2" | "sb" } }>();
 
-async function playlist(slug: string, rend: string) {
+// Videos live in Cloudflare R2 (bucket R2_BUCKET) when it holds the lesson; otherwise in Supabase storage (acad-hls).
+const R2_EP = Deno.env.get("R2_ENDPOINT") || "", R2_BUCKET = Deno.env.get("R2_BUCKET") || "";
+const r2 = R2_EP && R2_BUCKET ? new AwsClient({ accessKeyId: Deno.env.get("R2_ACCESS_KEY_ID")!, secretAccessKey: Deno.env.get("R2_SECRET_ACCESS_KEY")!, service: "s3", region: "auto" }) : null;
+const r2url = (k: string) => `${R2_EP.replace(/\/$/, "")}/${R2_BUCKET}/${k}`;
+async function r2sign(k: string, ttl: number) {
+  const u = new URL(r2url(k)); u.searchParams.set("X-Amz-Expires", String(ttl));
+  return (await r2!.sign(u.toString(), { method: "GET", aws: { signQuery: true } })).url;
+}
+
+async function playlist(slug: string, rend: string): Promise<{ text: string; src: "r2" | "sb" } | null> {
   const k = `${slug}/${rend}`; const c = cache.get(k);
-  if (c && Date.now() - c.at < 600_000) return c.text;
-  const { data, error } = await admin.storage.from("acad-hls").download(`${k}/index.m3u8`);
-  if (error || !data) return null;
-  const text = await data.text(); cache.set(k, { at: Date.now(), text }); return text;
+  if (c && Date.now() - c.at < 600_000) return c.val;
+  let val: { text: string; src: "r2" | "sb" } | null = null;
+  if (r2) {
+    const r = await r2.fetch(r2url(`${k}/index.m3u8`)).catch(() => null);
+    if (r?.ok) val = { text: await r.text(), src: "r2" };
+  }
+  if (!val) {
+    const { data, error } = await admin.storage.from("acad-hls").download(`${k}/index.m3u8`);
+    if (!error && data) val = { text: await data.text(), src: "sb" };
+  }
+  if (val) cache.set(k, { at: Date.now(), val });
+  return val;
 }
 
 Deno.serve(async (req) => {
@@ -53,11 +71,17 @@ Deno.serve(async (req) => {
 
   const variants = [];
   for (const r of RENDS) {
-    const text = await playlist(slug, r.name);
-    if (!text) continue;
+    const pl = await playlist(slug, r.name);
+    if (!pl) continue;
+    const text = pl.text;
     const segs = text.split("\n").filter((l) => l && !l.startsWith("#"));
-    const { data: signed } = await admin.storage.from("acad-hls").createSignedUrls(segs.map((s) => `${slug}/${r.name}/${s}`), TTL);
-    const map = new Map((signed || []).map((x, i) => [segs[i], x.signedUrl]));
+    let map: Map<string, string>;
+    if (pl.src === "r2") {
+      map = new Map(await Promise.all(segs.map(async (s) => [s, await r2sign(`${slug}/${r.name}/${s}`, TTL)] as [string, string])));
+    } else {
+      const { data: signed } = await admin.storage.from("acad-hls").createSignedUrls(segs.map((s) => `${slug}/${r.name}/${s}`), TTL);
+      map = new Map((signed || []).map((x, i) => [segs[i], x.signedUrl]));
+    }
     const out = text.split("\n").map((l) => (l && !l.startsWith("#") ? map.get(l) || l : l.replace("KEYURI", keyUrl))).join("\n");
     variants.push({ ...r, playlist: out });
   }
