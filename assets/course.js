@@ -6,6 +6,7 @@ window.COURSE = {
   videos: {
     "l-0-1": { covers: ["0.1"], free: true },
     "l-0-2": { covers: ["0.2"], free: true },
+    "l-1-2": { covers: ["1.2"] },
     "l-1-4": { covers: ["1.4"] },
     "l-1-5": { covers: ["1.5"] },
     "l-2-1": { covers: ["2.1"] },
@@ -39,7 +40,7 @@ window.COURSE = {
       gains: ["ADR, occupancy aur profit ka asal hisaab", "Arbitrage, co-hosting aur own-unit models ka farq", "Beginners ki 5 bari galtiyon se bachna"],
       lessons: [
         ["1.1", "Airbnb aur STR kya hai", "Short-term rental ka business Pakistan mein kaise chalta hai."],
-        ["1.2", "Paisa kaise banta hai: ADR, occupancy aur profit", "18, 20 aur 24 raaton pe revenue ka hisaab."],
+        ["1.2", "Paisa kaise banta hai: ADR, occupancy aur profit", "18, 20 aur 24 raaton pe revenue ka hisaab.", "l-1-2"],
         ["1.3", "Guests kaun hain aur listing kyun chalti hai", "Families, corporate, overseas: kis ko kya chahiye."],
         ["1.4", "Teen business models", "Capital aur time ke hisaab se Model A ya B chunna.", "l-1-4"],
         ["1.5", "Sahi mindset aur beginners ki aam galtiyan", "Woh 5 galtiyan jo pehli unit ka nuksan karwati hain.", "l-1-5"],
