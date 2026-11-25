@@ -32,7 +32,6 @@ window.COURSE = {
     "l-5-3": { covers: ["5.3"] },
     "l-5-4": { covers: ["5.4"] },
     "l-5-5": { covers: ["5.5"] },
-    "l-5-6": { covers: ["5.6"] },
   },
 
   modules: [
@@ -93,7 +92,7 @@ window.COURSE = {
         ["5.3", "Airbnb pe listing banana: step by step", "Har setting, recommended options ke saath.", "l-5-3"],
         ["5.4", "Title aur description jo bookings laayein", "Formula se titles aur structured description.", "l-5-4"],
         ["5.5", "Ranking aur weekly optimization", "Har Monday 30 minute ka review system.", "l-5-5"],
-        ["5.6", "Booking.com, multi-platform aur calendar sync", "iCal sync aur double booking se bachao.", "l-5-6"],
+        ["5.6", "Booking.com, multi-platform aur calendar sync", "iCal sync aur double booking se bachao."],
       ] },
     { n: 6, title: "Pricing aur revenue", tag: "Revenue",
       blurb: "Dynamic pricing, promotions, mehfooz direct bookings aur payouts ka management.",
