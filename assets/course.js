@@ -35,6 +35,8 @@ window.COURSE = {
     "l-5-6": { covers: ["5.6"] },
     "l-6-1": { covers: ["6.1"] },
     "l-6-2": { covers: ["6.2"] },
+    "l-6-3": { covers: ["6.3"] },
+    "l-6-4": { covers: ["6.4"] },
   },
 
   modules: [
@@ -103,8 +105,8 @@ window.COURSE = {
       lessons: [
         ["6.1", "Dynamic pricing ki buniyad", "Season, events aur din ke hisaab se price.", "l-6-1"],
         ["6.2", "Promotions: kab aur kaun si", "Weekly, monthly aur custom discounts.", "l-6-2"],
-        ["6.3", "Direct bookings mehfooz tareeqe se", "WhatsApp broadcast aur 8-step direct booking flow."],
-        ["6.4", "Payouts aur paise ka management", "Payout method, fees aur net income tracking."],
+        ["6.3", "Direct bookings mehfooz tareeqe se", "WhatsApp broadcast aur 8-step direct booking flow.", "l-6-3"],
+        ["6.4", "Payouts aur paise ka management", "Payout method, fees aur net income tracking.", "l-6-4"],
       ] },
     { n: 7, title: "Operations aur guest management", tag: "Operations",
       blurb: "Guest messages, check-in system, cleaning SOP, inventory, maintenance, AirCover, reviews aur AI.",
