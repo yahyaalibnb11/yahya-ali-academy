@@ -3,7 +3,7 @@
    - Moving watermark with the student's email/phone, re-created if removed (video pauses meanwhile).
    - No download/PiP/context menu, pauses when the tab is hidden, fullscreen keeps the watermark. */
 const Player = (() => {
-  let hls = null, el = null, video = null, mark = null, wmTimer = null, blobs = [], onTime = null, wmText = "";
+  let hls = null, el = null, video = null, mark = null, wmTimer = null, wmCheck = null, wmObs = null, blobs = [], onTime = null, wmText = "";
   const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
   function build(host) {
@@ -111,8 +111,8 @@ const Player = (() => {
     };
     place(); clearInterval(wmTimer); wmTimer = setInterval(place, 4500);
     const hiddenMark = () => { const cs = getComputedStyle(mark); return cs.display === "none" || cs.visibility === "hidden" || +cs.opacity < 0.1; };
-    new MutationObserver(() => { if (!el.contains(mark)) { video.pause(); place(); } }).observe(el, { childList: true });
-    setInterval(() => { if (el && el.contains(mark) && hiddenMark() && !video.paused) { video.pause(); mark.removeAttribute("class"); mark.className = "pl-wm"; mark.removeAttribute("style"); place(); } }, 1500);
+    wmObs && wmObs.disconnect(); wmObs = new MutationObserver(() => { if (el && !el.contains(mark)) { video.pause(); place(); } }); wmObs.observe(el, { childList: true });
+    clearInterval(wmCheck); wmCheck = setInterval(() => { if (el && el.contains(mark) && hiddenMark() && !video.paused) { video.pause(); mark.removeAttribute("class"); mark.className = "pl-wm"; mark.removeAttribute("style"); place(); } }, 1500);
   }
 
   function message(html) { const m = q(".pl-msg"); m.innerHTML = html; m.hidden = !html; }
@@ -160,7 +160,7 @@ const Player = (() => {
     return true;
   }
   function destroy() {
-    clearInterval(wmTimer);
+    clearInterval(wmTimer); clearInterval(wmCheck); wmObs && wmObs.disconnect(); wmObs = null;
     if (hls) { hls.destroy(); hls = null; }
     blobs.forEach((u) => URL.revokeObjectURL(u)); blobs = [];
     if (el) { el.classList.remove("pseudo-fs"); document.body.classList.remove("no-scroll"); }
