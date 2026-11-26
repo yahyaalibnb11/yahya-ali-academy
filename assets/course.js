@@ -34,6 +34,7 @@ window.COURSE = {
     "l-5-5": { covers: ["5.5"] },
     "l-5-6": { covers: ["5.6"] },
     "l-6-1": { covers: ["6.1"] },
+    "l-6-2": { covers: ["6.2"] },
   },
 
   modules: [
@@ -101,7 +102,7 @@ window.COURSE = {
       gains: ["Base, minimum aur maximum price", "Eid aur lambay weekends pe pricing", "Payout tracking sheet"],
       lessons: [
         ["6.1", "Dynamic pricing ki buniyad", "Season, events aur din ke hisaab se price.", "l-6-1"],
-        ["6.2", "Promotions: kab aur kaun si", "Weekly, monthly aur custom discounts."],
+        ["6.2", "Promotions: kab aur kaun si", "Weekly, monthly aur custom discounts.", "l-6-2"],
         ["6.3", "Direct bookings mehfooz tareeqe se", "WhatsApp broadcast aur 8-step direct booking flow."],
         ["6.4", "Payouts aur paise ka management", "Payout method, fees aur net income tracking."],
       ] },
