@@ -48,6 +48,7 @@ window.COURSE = {
     "l-8-1": { covers: ["8.1"] },
     "l-8-2": { covers: ["8.2"] },
     "l-8-3": { covers: ["8.3"] },
+    "l-8-4": { covers: ["8.4"] },
   },
 
   modules: [
@@ -139,7 +140,7 @@ window.COURSE = {
         ["8.1", "Co-hosting kya hai", "Concept, aur pehle khud ki chalti unit kyun zaroori hai.", "l-8-1"],
         ["8.2", "Ember Rentals jaisa model kaise kaam karta hai", "Owners ke darr aur systems ka jawab.", "l-8-2"],
         ["8.3", "Arbitrage vs co-hosting aur smart path", "4-step path, target dates ke saath.", "l-8-3"],
-        ["8.4", "Aap ka 30 din ka action plan", "Aaj se pehli unit ke launch tak."],
+        ["8.4", "Aap ka 30 din ka action plan", "Aaj se pehli unit ke launch tak.", "l-8-4"],
         ["8.5", "Aage kya: live mentorship", "Course ke baad ka raasta."],
       ] },
   ],
