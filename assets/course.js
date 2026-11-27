@@ -37,6 +37,7 @@ window.COURSE = {
     "l-6-2": { covers: ["6.2"] },
     "l-6-3": { covers: ["6.3"] },
     "l-6-4": { covers: ["6.4"] },
+    "l-7-4": { covers: ["7.4"] },
   },
 
   modules: [
@@ -115,7 +116,7 @@ window.COURSE = {
         ["7.1", "Guest communication: timeline aur templates", "Booking se check-out tak 5 scheduled messages."],
         ["7.2", "Check-in aur check-out ka system", "Welcome guide aur route video."],
         ["7.3", "Cleaning SOP aur cleaning team", "Checklist, training aur photo proof."],
-        ["7.4", "Inventory aur restocking system", "Minimum stock aur wholesale buying."],
+        ["7.4", "Inventory aur restocking system", "Minimum stock aur wholesale buying.", "l-7-4"],
         ["7.5", "Maintenance aur emergencies", "Vendor list, backups aur maintenance calendar."],
         ["7.6", "AirCover aur damage protection", "Receipts, photos aur claim ka tareeqa."],
         ["7.7", "5-star reviews aur AI se rozana kaam", "Review strategy aur AI prompt templates."],
