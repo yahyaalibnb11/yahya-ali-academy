@@ -41,6 +41,7 @@ window.COURSE = {
     "l-7-2": { covers: ["7.2"] },
     "l-7-3": { covers: ["7.3"] },
     "l-7-4": { covers: ["7.4"] },
+    "l-7-5": { covers: ["7.5"] },
   },
 
   modules: [
@@ -120,7 +121,7 @@ window.COURSE = {
         ["7.2", "Check-in aur check-out ka system", "Welcome guide aur route video.", "l-7-2"],
         ["7.3", "Cleaning SOP aur cleaning team", "Checklist, training aur photo proof.", "l-7-3"],
         ["7.4", "Inventory aur restocking system", "Minimum stock aur wholesale buying.", "l-7-4"],
-        ["7.5", "Maintenance aur emergencies", "Vendor list, backups aur maintenance calendar."],
+        ["7.5", "Maintenance aur emergencies", "Vendor list, backups aur maintenance calendar.", "l-7-5"],
         ["7.6", "AirCover aur damage protection", "Receipts, photos aur claim ka tareeqa."],
         ["7.7", "5-star reviews aur AI se rozana kaam", "Review strategy aur AI prompt templates."],
         ["7.8", "Tools aur PMS: kab kya chahiye", "Units ki tadaad ke hisaab se tools ladder."],
