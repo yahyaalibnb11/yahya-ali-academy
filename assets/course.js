@@ -44,6 +44,7 @@ window.COURSE = {
     "l-7-5": { covers: ["7.5"] },
     "l-7-6": { covers: ["7.6"] },
     "l-7-7": { covers: ["7.7"] },
+    "l-7-8": { covers: ["7.8"] },
   },
 
   modules: [
@@ -126,7 +127,7 @@ window.COURSE = {
         ["7.5", "Maintenance aur emergencies", "Vendor list, backups aur maintenance calendar.", "l-7-5"],
         ["7.6", "AirCover aur damage protection", "Receipts, photos aur claim ka tareeqa.", "l-7-6"],
         ["7.7", "5-star reviews aur AI se rozana kaam", "Review strategy aur AI prompt templates.", "l-7-7"],
-        ["7.8", "Tools aur PMS: kab kya chahiye", "Units ki tadaad ke hisaab se tools ladder."],
+        ["7.8", "Tools aur PMS: kab kya chahiye", "Units ki tadaad ke hisaab se tools ladder.", "l-7-8"],
       ] },
     { n: 8, title: "Co-hosting basics aur aage ka raasta", tag: "Next level",
       blurb: "Co-hosting ka concept, Ember Rentals jaisa model, smart path aur aap ka 30 din ka action plan.",
