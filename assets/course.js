@@ -46,6 +46,7 @@ window.COURSE = {
     "l-7-7": { covers: ["7.7"] },
     "l-7-8": { covers: ["7.8"] },
     "l-8-1": { covers: ["8.1"] },
+    "l-8-2": { covers: ["8.2"] },
   },
 
   modules: [
@@ -135,7 +136,7 @@ window.COURSE = {
       gains: ["Arbitrage aur co-hosting ka asal farq", "Management company model ka concept", "Dates ke saath 30 din ka plan"],
       lessons: [
         ["8.1", "Co-hosting kya hai", "Concept, aur pehle khud ki chalti unit kyun zaroori hai.", "l-8-1"],
-        ["8.2", "Ember Rentals jaisa model kaise kaam karta hai", "Owners ke darr aur systems ka jawab."],
+        ["8.2", "Ember Rentals jaisa model kaise kaam karta hai", "Owners ke darr aur systems ka jawab.", "l-8-2"],
         ["8.3", "Arbitrage vs co-hosting aur smart path", "4-step path, target dates ke saath."],
         ["8.4", "Aap ka 30 din ka action plan", "Aaj se pehli unit ke launch tak."],
         ["8.5", "Aage kya: live mentorship", "Course ke baad ka raasta."],
