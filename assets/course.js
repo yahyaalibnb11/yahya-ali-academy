@@ -38,6 +38,7 @@ window.COURSE = {
     "l-6-3": { covers: ["6.3"] },
     "l-6-4": { covers: ["6.4"] },
     "l-7-1": { covers: ["7.1"] },
+    "l-7-2": { covers: ["7.2"] },
     "l-7-4": { covers: ["7.4"] },
   },
 
@@ -115,7 +116,7 @@ window.COURSE = {
       gains: ["5 ready message templates", "Cleaning SOP aur team WhatsApp system", "AI prompts jo rozana ka kaam karein"],
       lessons: [
         ["7.1", "Guest communication: timeline aur templates", "Booking se check-out tak 5 scheduled messages.", "l-7-1"],
-        ["7.2", "Check-in aur check-out ka system", "Welcome guide aur route video."],
+        ["7.2", "Check-in aur check-out ka system", "Welcome guide aur route video.", "l-7-2"],
         ["7.3", "Cleaning SOP aur cleaning team", "Checklist, training aur photo proof."],
         ["7.4", "Inventory aur restocking system", "Minimum stock aur wholesale buying.", "l-7-4"],
         ["7.5", "Maintenance aur emergencies", "Vendor list, backups aur maintenance calendar."],
